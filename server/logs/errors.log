@@ -1,0 +1,303 @@
+{
+  error: Error: uncaught exception
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: uncaught exception\n' +
+    'Error: uncaught exception\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'Error: uncaught exception\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Fri Jan 06 2023 15:52:40 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 5377,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 72183808,
+      heapTotal: 37318656,
+      heapUsed: 21975088,
+      external: 23688939,
+      arrayBuffers: 18357313
+    }
+  },
+  os: {
+    loadavg: [ 3.4111328125, 2.9833984375, 2.88623046875 ],
+    uptime: 22078
+  },
+  trace: [
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-06T20:52:40.304Z'
+}
+{
+  error: Error: uncaught exception
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: uncaught exception\n' +
+    'Error: uncaught exception\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'Error: uncaught exception\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Fri Jan 06 2023 15:53:11 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 5388,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 72687616,
+      heapTotal: 37318656,
+      heapUsed: 21871560,
+      external: 23688954,
+      arrayBuffers: 18351491
+    }
+  },
+  os: {
+    loadavg: [ 3.447265625, 3.03173828125, 2.90673828125 ],
+    uptime: 22109
+  },
+  trace: [
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-06T20:53:11.577Z'
+}
+{
+  error: Error: uncaught exception
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: uncaught exception\n' +
+    'Error: uncaught exception\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'Error: uncaught exception\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:18:7\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Fri Jan 06 2023 15:53:29 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 5392,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 71692288,
+      heapTotal: 36532224,
+      heapUsed: 26164936,
+      external: 22441810,
+      arrayBuffers: 18758188
+    }
+  },
+  os: {
+    loadavg: [ 2.892578125, 2.931640625, 2.87353515625 ],
+    uptime: 22127
+  },
+  trace: [
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-06T20:53:29.693Z'
+}
