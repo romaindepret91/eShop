@@ -1,11 +1,17 @@
 import User from "../models/user.js";
-import { validateUserCreate } from "./validations/users.js";
+import { validateCreateUser } from "./validations/users.js";
 import _ from "lodash";
 import bcrypt from "bcrypt";
 
+/**
+ *  Create a new user in the database
+ * @param {object} req
+ * @param {object} res
+ * @returns errors ? response with relevant error message : created user with auth token
+ */
 export const createUser = async (req, res) => {
   // Data validation
-  const validation = validateUserCreate(req.body);
+  const validation = validateCreateUser(req.body);
   if (validation.error)
     return res.status(400).send(validation.error.details[0].message);
 
@@ -33,16 +39,19 @@ export const createUser = async (req, res) => {
   // Save user in DB
   await user.save();
 
+  // Generate web token
+  const authToken = user.generateAuthToken();
+
   // Send response with selected user properties (no password)
-  console.log(user);
-  res.json(
-    _.pick(user, [
+  res.json({
+    user: _.pick(user, [
       "username",
       "email",
       "firstname",
       "surname",
       "address",
       "isAdmin",
-    ])
-  );
+    ]),
+    authToken: authToken,
+  });
 };

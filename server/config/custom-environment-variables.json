@@ -1,3 +1,4 @@
 {
+  "jwtPrivateKey": "eShop_jwtPrivateKey",
   "mongoDBToken": "eShop_mongoDBToken"
 }

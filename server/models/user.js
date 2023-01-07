@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import jwt from "jsonwebtoken";
+import config from "config";
 const { Schema } = mongoose;
 
 const userSchema = new Schema(
@@ -60,5 +62,15 @@ const userSchema = new Schema(
   },
   { timestamps: true }
 );
+
+// Method to generate web token for a user
+userSchema.methods.generateAuthToken = function () {
+  const token = jwt.sign(
+    { _id: this._id, isAdmin: this.isAdmin },
+    config.get("jwtPrivateKey"),
+    { expiresIn: "7d" }
+  );
+  return token;
+};
 
 export default mongoose.model("User", userSchema);

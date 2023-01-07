@@ -336,3 +336,115 @@
   level: 'error',
   timestamp: '2023-01-07T17:00:02.378Z'
 }
+{
+  error: Error: FATAL ERROR: jwtPrivateKey is not defined
+      at default (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/config.js:6:11)
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:11:1
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: FATAL ERROR: jwtPrivateKey is not defined\n' +
+    'Error: FATAL ERROR: jwtPrivateKey is not defined\n' +
+    '    at default (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/config.js:6:11)\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:11:1\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'Error: FATAL ERROR: jwtPrivateKey is not defined\n' +
+    '    at default (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/config.js:6:11)\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:11:1\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Sat Jan 07 2023 14:35:24 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 3085,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 79204352,
+      heapTotal: 59363328,
+      heapUsed: 32171936,
+      external: 25514054,
+      arrayBuffers: 18698105
+    }
+  },
+  os: {
+    loadavg: [ 2.5810546875, 2.87939453125, 2.865234375 ],
+    uptime: 15905
+  },
+  trace: [
+    {
+      column: 11,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/config.js',
+      function: 'default',
+      line: 6,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 11,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-07T19:35:24.296Z'
+}

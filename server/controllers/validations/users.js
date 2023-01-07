@@ -12,7 +12,12 @@ const complexityOptions = {
   requirementCount: 5,
 };
 
-export function validateUserCreate(user) {
+/**
+ *
+ * @param {object} user : user data reveived from client
+ * @returns object: values of data received, with error object if error
+ */
+export function validateCreateUser(user) {
   const schema = Joi.object({
     username: Joi.string().min(2).max(255).required(),
     email: Joi.string().email().required(),
