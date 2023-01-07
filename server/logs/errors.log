@@ -301,3 +301,38 @@
   ],
   timestamp: '2023-01-06T20:53:29.693Z'
 }
+{
+  message: 'E11000 duplicate key error collection: eShop.users index: email_1 dup key: { email: "admin@vino.com" }',
+  level: 'error',
+  timestamp: '2023-01-07T16:03:15.014Z'
+}
+{
+  message: 'E11000 duplicate key error collection: eShop.users index: email_1 dup key: { email: "admin@vino.com" }',
+  level: 'error',
+  timestamp: '2023-01-07T16:21:16.663Z'
+}
+{
+  message: 'E11000 duplicate key error collection: eShop.users index: email_1 dup key: { email: "admin@vino.com" }',
+  level: 'error',
+  timestamp: '2023-01-07T16:29:31.657Z'
+}
+{
+  message: 'Unexpected token } in JSON at position 165',
+  level: 'error',
+  timestamp: '2023-01-07T16:42:39.334Z'
+}
+{
+  message: 'User validation failed: username: Path `username` is required.',
+  level: 'error',
+  timestamp: '2023-01-07T16:58:23.379Z'
+}
+{
+  message: 'User validation failed: username: Path `username` is required.',
+  level: 'error',
+  timestamp: '2023-01-07T16:59:51.810Z'
+}
+{
+  message: 'User validation failed: username: Path `username` (`s`) is shorter than the minimum allowed length (2).',
+  level: 'error',
+  timestamp: '2023-01-07T17:00:02.378Z'
+}

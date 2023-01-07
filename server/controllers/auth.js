@@ -1,3 +1,3 @@
-export const users = async (req, res) => {
-  res.json({ data: "users data" });
+export const auth = async (req, res) => {
+  res.json({ data: "authentication" });
 };

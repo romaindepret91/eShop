@@ -44,6 +44,7 @@ const userSchema = new Schema(
     address: {
       type: String,
       trim: true,
+      default: "",
     },
     isAdmin: {
       type: Boolean,
