@@ -1,9 +1,9 @@
 import express from "express";
-import { auth } from "../controllers/auth.js";
+import { startSession } from "../controllers/sessions.js";
 import catchErrors from "../middlewares/catchErrors.js";
 
 const router = express.Router();
 
-router.get("/auth", catchErrors(auth));
+router.post("/sessions", catchErrors(startSession));
 
 export default router;

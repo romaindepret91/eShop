@@ -1,16 +1,6 @@
 import Joi from "joi";
 import JoiPasswordComplexity from "joi-password-complexity";
-
-// Password schema
-const complexityOptions = {
-  min: 8,
-  max: 30,
-  lowerCase: 1,
-  upperCase: 1,
-  numeric: 1,
-  symbol: 0,
-  requirementCount: 5,
-};
+import { passwordSchema } from "./passwordSchema.js";
 
 /**
  *
@@ -21,7 +11,7 @@ export function validateCreateUser(user) {
   const schema = Joi.object({
     username: Joi.string().min(2).max(255).required(),
     email: Joi.string().email().required(),
-    password: JoiPasswordComplexity(complexityOptions).required(),
+    password: JoiPasswordComplexity(passwordSchema).required(),
     password_confirmed: Joi.string().valid(Joi.ref("password")).required(),
     firstname: Joi.string().min(2).max(255).required(),
     surname: Joi.string().min(2).max(255).required(),
