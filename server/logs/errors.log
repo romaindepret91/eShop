@@ -448,3 +448,131 @@
   ],
   timestamp: '2023-01-07T19:35:24.296Z'
 }
+{
+  message: 'User is not defined',
+  level: 'error',
+  timestamp: '2023-01-10T14:20:24.437Z'
+}
+{
+  message: 'bcrypt is not defined',
+  level: 'error',
+  timestamp: '2023-01-10T14:21:24.206Z'
+}
+{
+  error: ReferenceError: require is not defined in ES module scope, you can use import instead
+  This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/protectRoute.js:1:13
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: require is not defined in ES module scope, you can use import instead\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    'ReferenceError: require is not defined in ES module scope, you can use import instead\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/protectRoute.js:1:13\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'ReferenceError: require is not defined in ES module scope, you can use import instead\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/protectRoute.js:1:13\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Tue Jan 10 2023 09:41:25 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 2041,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 79015936,
+      heapTotal: 57790464,
+      heapUsed: 33670080,
+      external: 24439061,
+      arrayBuffers: 18840353
+    }
+  },
+  os: {
+    loadavg: [ 3.22216796875, 3.21630859375, 3.48583984375 ],
+    uptime: 3044
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: null,
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 13,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/protectRoute.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-10T14:41:25.970Z'
+}
+{
+  message: 'E11000 duplicate key error collection: eShop.categories index: slug_1 dup key: { slug: "new-category" }',
+  level: 'error',
+  timestamp: '2023-01-10T16:57:45.312Z'
+}

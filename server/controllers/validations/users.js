@@ -3,7 +3,7 @@ import JoiPasswordComplexity from "joi-password-complexity";
 import { passwordSchema } from "./passwordSchema.js";
 
 /**
- *
+ * Validate user data when user sign up
  * @param {object} user : user data reveived from client
  * @returns object: values of data received, with error object if error
  */

@@ -1,5 +1,8 @@
+// Models
 import User from "../models/user.js";
+// Validation
 import { validateCreateUser } from "./validations/users.js";
+// Npm packages
 import _ from "lodash";
 import bcrypt from "bcrypt";
 
