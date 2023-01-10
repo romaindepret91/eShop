@@ -10,6 +10,7 @@ import _ from "lodash";
  * AUTHENTICATE USER: Start a new session when user log in
  * @param {object} req
  * @param {object} res
+ * @returns errors ? response with relevant error message : loggedin user with auth token
  */
 export const startSession = async (req, res) => {
   // Data validation
