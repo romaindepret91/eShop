@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import slugify from "slugify";
 
 const { ObjectId } = mongoose.Schema;
 
@@ -9,15 +10,26 @@ const productSchema = new mongoose.Schema(
       trim: true,
       required: true,
       minLegnth: 2,
-      maxLength: 255,
+      maxLength: 32,
     },
     slug: {
       type: String,
       lowercase: true,
+      default: function () {
+        return slugify(this.name);
+      },
+    },
+    brand: {
+      type: String,
+      trim: true,
+      required: true,
+      minLength: 2,
+      maxLength: 32,
     },
     description: {
       type: String,
       required: true,
+      minLength: 2,
       maxLength: 2000,
     },
     price: {
@@ -30,16 +42,17 @@ const productSchema = new mongoose.Schema(
       ref: "Category",
       reuiqred: true,
     },
-    quantity: {
+    stock: {
       type: Number,
+      required: true,
     },
     sold: {
       type: Number,
       default: 0,
     },
-    photo: {
-      data: Buffer,
-      contentType: String,
+    images: {
+      type: [String],
+      default: [],
     },
     shipping: {
       required: false,

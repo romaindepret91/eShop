@@ -586,3 +586,333 @@
   level: 'error',
   timestamp: '2023-01-10T21:22:28.964Z'
 }
+{
+  message: 'Joi.objectId is not a function',
+  level: 'error',
+  timestamp: '2023-01-11T15:40:50.291Z'
+}
+{
+  message: 'req.fields.merge is not a function',
+  level: 'error',
+  timestamp: '2023-01-11T15:54:46.467Z'
+}
+{
+  message: 'Unexpected field',
+  level: 'error',
+  timestamp: '2023-01-11T19:17:01.907Z'
+}
+{
+  error: TypeError: storage._handleFile is not a function
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at allowAll (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:8:3)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28)
+      at HeaderParser.cb (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:200:10)
+      at SBMH.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:104:16),
+  level: 'error',
+  message: 'uncaughtException: storage._handleFile is not a function\n' +
+    'TypeError: storage._handleFile is not a function\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at allowAll (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:8:3)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)\n' +
+    '    at HeaderParser.cb (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:358:14)\n' +
+    '    at HeaderParser.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:162:20)\n' +
+    '    at SBMH.ssCb [as _cb] (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:394:37)\n' +
+    '    at feed (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:200:10)\n' +
+    '    at SBMH.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:104:16)',
+  stack: 'TypeError: storage._handleFile is not a function\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at allowAll (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:8:3)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)\n' +
+    '    at HeaderParser.cb (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:358:14)\n' +
+    '    at HeaderParser.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:162:20)\n' +
+    '    at SBMH.ssCb [as _cb] (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:394:37)\n' +
+    '    at feed (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:200:10)\n' +
+    '    at SBMH.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:104:16)',
+  exception: true,
+  date: 'Wed Jan 11 2023 14:43:08 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 60555,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 70991872,
+      heapTotal: 29741056,
+      heapUsed: 26453088,
+      external: 21471027,
+      arrayBuffers: 18321587
+    }
+  },
+  os: {
+    loadavg: [ 1.90869140625, 2.330078125, 2.49169921875 ],
+    uptime: 22063
+  },
+  trace: [
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'allowAll',
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js',
+      function: 'HeaderParser.cb',
+      line: 358,
+      method: 'cb',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js',
+      function: 'HeaderParser.push',
+      line: 162,
+      method: 'push',
+      native: false
+    },
+    {
+      column: 37,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js',
+      function: 'SBMH.ssCb [as _cb]',
+      line: 394,
+      method: 'ssCb [as _cb]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js',
+      function: 'feed',
+      line: 200,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js',
+      function: 'SBMH.push',
+      line: 104,
+      method: 'push',
+      native: false
+    }
+  ],
+  timestamp: '2023-01-11T19:43:08.481Z'
+}
+{
+  error: TypeError: storage._handleFile is not a function
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at allowAll (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:8:3)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28)
+      at HeaderParser.cb (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:358:14)
+      at HeaderParser.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:162:20)
+      at SBMH.ssCb [as _cb] (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:394:37)
+      at feed (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:219:14)
+      at SBMH.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:104:16),
+  level: 'error',
+  message: 'uncaughtException: storage._handleFile is not a function\n' +
+    'TypeError: storage._handleFile is not a function\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at allowAll (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:8:3)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)\n' +
+    '    at HeaderParser.cb (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:358:14)\n' +
+    '    at HeaderParser.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:162:20)\n' +
+    '    at SBMH.ssCb [as _cb] (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:394:37)\n' +
+    '    at feed (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:219:14)\n' +
+    '    at SBMH.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:104:16)',
+  stack: 'TypeError: storage._handleFile is not a function\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at allowAll (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:8:3)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)\n' +
+    '    at HeaderParser.cb (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:358:14)\n' +
+    '    at HeaderParser.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:162:20)\n' +
+    '    at SBMH.ssCb [as _cb] (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js:394:37)\n' +
+    '    at feed (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:219:14)\n' +
+    '    at SBMH.push (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js:104:16)',
+  exception: true,
+  date: 'Wed Jan 11 2023 14:51:56 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 60662,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 88666112,
+      heapTotal: 61984768,
+      heapUsed: 28092968,
+      external: 25900560,
+      arrayBuffers: 18371917
+    }
+  },
+  os: {
+    loadavg: [ 2.40869140625, 2.53369140625, 2.5341796875 ],
+    uptime: 22591
+  },
+  trace: [
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'allowAll',
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js',
+      function: 'HeaderParser.cb',
+      line: 358,
+      method: 'cb',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js',
+      function: 'HeaderParser.push',
+      line: 162,
+      method: 'push',
+      native: false
+    },
+    {
+      column: 37,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/busboy/lib/types/multipart.js',
+      function: 'SBMH.ssCb [as _cb]',
+      line: 394,
+      method: 'ssCb [as _cb]',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js',
+      function: 'feed',
+      line: 219,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/streamsearch/lib/sbmh.js',
+      function: 'SBMH.push',
+      line: 104,
+      method: 'push',
+      native: false
+    }
+  ],
+  timestamp: '2023-01-11T19:51:56.108Z'
+}
+{
+  message: "ENOENT: no such file or directory, open 'public/uploads/images/images-1673466809280.jpeg'",
+  level: 'error',
+  timestamp: '2023-01-11T19:53:29.283Z'
+}
+{
+  message: "ENOENT: no such file or directory, open 'public/uploads/images/images-1673466989683.jpeg'",
+  level: 'error',
+  timestamp: '2023-01-11T19:56:29.686Z'
+}
+{
+  message: "ENOENT: no such file or directory, open 'public/uploads/users/user-63bd73c5e37caa8908780cc9/products/product-images-1673467207027.jpeg'",
+  level: 'error',
+  timestamp: '2023-01-11T20:00:07.030Z'
+}
+{
+  message: "ENOENT: no such file or directory, open 'public/uploads/users/user-63bd73c5e37caa8908780cc9/products/product-images-1673467827274.jpeg'",
+  level: 'error',
+  timestamp: '2023-01-11T20:10:27.278Z'
+}
+{
+  message: "ENOENT: no such file or directory, open 'public/uploads/users/user-63bd73c5e37caa8908780cc9/products/product-images-1673467897339.jpeg'",
+  level: 'error',
+  timestamp: '2023-01-11T20:11:37.344Z'
+}
