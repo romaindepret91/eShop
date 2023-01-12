@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { uploadProductImages } from "../startup/fileUpload.js";
+import { uploadFiles } from "../middlewares/uploadFiles.js";
 // Controller functions
 import {
   createProduct,
@@ -17,7 +17,7 @@ import catchErrors from "../middlewares/catchErrors.js";
 // Create new product
 router.post(
   "/products",
-  [isUserLoggedIn, isAdmin, uploadProductImages.array("images")],
+  [isUserLoggedIn, isAdmin, uploadFiles.array("images")],
   catchErrors(createProduct)
 );
 

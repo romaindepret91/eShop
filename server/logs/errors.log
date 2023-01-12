@@ -916,3 +916,18 @@
   level: 'error',
   timestamp: '2023-01-11T20:11:37.344Z'
 }
+{
+  message: 'Unvalid file type. Valid file extensions: jpg, jpeg, png, webp',
+  level: 'error',
+  timestamp: '2023-01-11T23:33:15.123Z'
+}
+{
+  message: 'File too large',
+  level: 'error',
+  timestamp: '2023-01-11T23:52:30.339Z'
+}
+{
+  message: 'File too large',
+  level: 'error',
+  timestamp: '2023-01-12T00:06:35.372Z'
+}
