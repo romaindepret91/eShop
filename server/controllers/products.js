@@ -8,6 +8,7 @@ import { removeProductFiles } from "./helpers/removeProductFiles.js";
 // Npm packages
 import mongoose from "mongoose";
 import slugify from "slugify";
+import _ from "lodash";
 
 /**
  * Create new product in the database
@@ -66,7 +67,20 @@ export const updateProduct = async (req, res) => {};
  * @param {object} res
  * @returns deleted product
  */
-export const deleteProduct = async (req, res) => {};
+export const deleteProduct = async (req, res) => {
+  // Check if product id is valid
+  const id = req.params.id;
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(400).send("Invalid product id format"); // check if valid
+
+  // Check if product exists and delete
+  const product = await Product.findByIdAndDelete(id);
+  if (!product) return res.status(404).send("Product with given id not found");
+
+  // Remove files from server
+  removeProductFiles(product.images);
+  res.send(product);
+};
 
 /**
  * Retrieve all products from database
@@ -75,7 +89,9 @@ export const deleteProduct = async (req, res) => {};
  * @returns All products
  */
 export const getProducts = async (req, res) => {
-  const products = await Product.find().sort({ createdAt: -1 });
+  const products = await Product.find()
+    .populate("category")
+    .sort({ createdAt: -1 });
   res.json(products);
 };
 
@@ -85,4 +101,20 @@ export const getProducts = async (req, res) => {
  * @param {object} res
  * @returns errors ? response with relevant error message : product object
  */
-export const getOneProduct = async (req, res) => {};
+export const getOneProduct = async (req, res) => {
+  // Check if product id is received and valid
+  const id = req.query.id;
+  if (!id) return res.status(400).send("Id product must be provided"); // check if received
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(400).send("Invalid product id format"); // check if valid
+
+  // Check if produtc with given id exists in database
+  const product = await Product.findById(id).populate("category");
+  if (!product) return res.status(404).send("Product with given id not found");
+
+  // Check if product slug received matches slug in database
+  if (product.slug !== req.params.slug)
+    return res.status(400).send("Product slug does not match records");
+
+  res.json(product);
+};

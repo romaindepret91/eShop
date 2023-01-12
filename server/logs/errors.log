@@ -1088,3 +1088,169 @@
   level: 'error',
   timestamp: '2023-01-12T15:52:57.090Z'
 }
+{
+  message: 'Cast to ObjectId failed for value "63c03bcde51e9f9480e5ac9" (type string) at path "_id" for model "Product"',
+  level: 'error',
+  timestamp: '2023-01-12T19:53:19.826Z'
+}
+{
+  error: [Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637303.jpeg'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'unlink',
+    path: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637303.jpeg'
+  },
+  level: 'error',
+  message: "unhandledRejection: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637303.jpeg'\n" +
+    "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637303.jpeg'",
+  stack: "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637303.jpeg'",
+  exception: true,
+  date: 'Thu Jan 12 2023 15:21:21 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 4551,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 70479872,
+      heapTotal: 29216768,
+      heapUsed: 27466824,
+      external: 21502055,
+      arrayBuffers: 18352615
+    }
+  },
+  os: {
+    loadavg: [ 1.81884765625, 2.24169921875, 2.43505859375 ],
+    uptime: 22255
+  },
+  trace: [],
+  timestamp: '2023-01-12T20:21:21.810Z'
+}
+{
+  error: [Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637304.jpeg'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'unlink',
+    path: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637304.jpeg'
+  },
+  level: 'error',
+  message: "unhandledRejection: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637304.jpeg'\n" +
+    "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637304.jpeg'",
+  stack: "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542637304.jpeg'",
+  exception: true,
+  date: 'Thu Jan 12 2023 15:21:21 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 4551,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 70643712,
+      heapTotal: 29216768,
+      heapUsed: 27538600,
+      external: 21510311,
+      arrayBuffers: 18360831
+    }
+  },
+  os: {
+    loadavg: [ 1.81884765625, 2.24169921875, 2.43505859375 ],
+    uptime: 22255
+  },
+  trace: [],
+  timestamp: '2023-01-12T20:21:21.816Z'
+}
+{
+  error: [Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'unlink',
+    path: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'
+  },
+  level: 'error',
+  message: "unhandledRejection: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'\n" +
+    "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'",
+  stack: "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'",
+  exception: true,
+  date: 'Thu Jan 12 2023 15:27:40 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 4580,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 72826880,
+      heapTotal: 29478912,
+      heapUsed: 27267000,
+      external: 21495326,
+      arrayBuffers: 18345886
+    }
+  },
+  os: {
+    loadavg: [ 2.67431640625, 2.7490234375, 2.6396484375 ],
+    uptime: 22634
+  },
+  trace: [],
+  timestamp: '2023-01-12T20:27:40.269Z'
+}
+{
+  error: [Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'unlink',
+    path: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'
+  },
+  level: 'error',
+  message: "unhandledRejection: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'\n" +
+    "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'",
+  stack: "Error: ENOENT: no such file or directory, unlink 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673542605151.jpeg'",
+  exception: true,
+  date: 'Thu Jan 12 2023 15:27:40 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 4580,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 72962048,
+      heapTotal: 29478912,
+      heapUsed: 27365792,
+      external: 21495390,
+      arrayBuffers: 18345910
+    }
+  },
+  os: {
+    loadavg: [ 2.67431640625, 2.7490234375, 2.6396484375 ],
+    uptime: 22634
+  },
+  trace: [],
+  timestamp: '2023-01-12T20:27:40.273Z'
+}
+{
+  message: '_ is not defined',
+  level: 'error',
+  timestamp: '2023-01-12T20:33:51.592Z'
+}
