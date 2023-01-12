@@ -36,12 +36,9 @@ router.delete(
 );
 
 // Get all products
-router.get("/products", [isUserLoggedIn, isAdmin], catchErrors(getProducts));
+router.get("/products", catchErrors(getProducts));
 
 // Get one product
-router.get(
-  "/products/:slug",
-  [isUserLoggedIn, isAdmin],
-  catchErrors(getOneProduct)
-);
+router.get("/products/:slug", catchErrors(getOneProduct));
+
 export default router;
