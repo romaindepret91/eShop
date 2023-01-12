@@ -7,7 +7,6 @@ import { validateProduct } from "./validations/products.js";
 import { removeProductFiles } from "./helpers/removeProductFiles.js";
 // Npm packages
 import mongoose from "mongoose";
-import _ from "lodash";
 import slugify from "slugify";
 
 /**
@@ -37,22 +36,21 @@ export const createProduct = async (req, res) => {
   // Save product in database
   const images = req.files.map((file) => file.path); // Extract files paths
   // Merge all properties
-  let product = Object.assign(
-    _.pick(req.body, [
-      "name",
-      "slug",
-      "brand",
-      "description",
-      "price",
-      "category",
-      "stock",
-    ]),
-    { images: images }
-  );
-
-  product = new Product(product);
-  product.save();
-  res.send(product);
+  const product = await new Product(
+    Object.assign(
+      _.pick(req.body, [
+        "name",
+        "slug",
+        "brand",
+        "description",
+        "price",
+        "category",
+        "stock",
+      ]),
+      { images: images }
+    )
+  ).save();
+  res.json(product);
 };
 
 /**
@@ -76,7 +74,10 @@ export const deleteProduct = async (req, res) => {};
  * @param {object} res
  * @returns All products
  */
-export const getProducts = async (req, res) => {};
+export const getProducts = async (req, res) => {
+  const products = await Product.find().sort({ createdAt: -1 });
+  res.json(products);
+};
 
 /**
  * Retrieve a product of a given id from database

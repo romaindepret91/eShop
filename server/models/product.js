@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import slugify from "slugify";
-
+const { Schema } = mongoose;
 const { ObjectId } = mongoose.Schema;
 
-const productSchema = new mongoose.Schema(
+const productSchema = new Schema(
   {
     name: {
       type: String,
@@ -59,7 +59,7 @@ const productSchema = new mongoose.Schema(
       type: Boolean,
     },
   },
-  { timestamp: true }
+  { timestamps: true }
 );
 
 export default mongoose.model("Product", productSchema);

@@ -16,6 +16,7 @@ export function validateCreateUser(user) {
     firstname: Joi.string().min(2).max(255).required(),
     surname: Joi.string().min(2).max(255).required(),
     address: Joi.string().max(255),
+    isAdmin: Joi.boolean(),
   });
   return schema.validate(user);
 }

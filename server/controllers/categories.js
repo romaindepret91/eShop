@@ -90,7 +90,8 @@ export const deleteCategory = async (req, res) => {
     return res
       .status(404)
       .send("Deletion failed: category with given id not found");
-  res.send(category);
+
+  res.json(category);
 };
 
 /**
