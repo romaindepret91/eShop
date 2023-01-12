@@ -20,7 +20,7 @@ export const createCategory = async (req, res) => {
     return res.status(400).send(validation.error.details[0].message);
 
   // Create slug property
-  req.body.slug = slugify(req.body.name);
+  req.body.slug = slugify(req.body.name).toLocaleLowerCase();
 
   // Check if category slug already taken
   const categoryExists = await Category.findOne({ slug: req.body.slug });

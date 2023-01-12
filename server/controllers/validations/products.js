@@ -15,17 +15,8 @@ export function validateProduct(product) {
     category: Joi.objectId().required(),
     stock: Joi.number().min(1).required(),
     sold: Joi.number().min(0),
-    images: Joi.any().description("Image Fil"),
     shipping: Joi.boolean(),
   });
 
   return schema.validate(product);
-}
-
-export function validateImagesProduct(images) {
-  const schema = Joi.object({
-    images: Joi.binary(),
-  });
-
-  return schema.validate(images);
 }

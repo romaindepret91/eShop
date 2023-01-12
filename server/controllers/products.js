@@ -1,10 +1,10 @@
 // Models
 import Product from "../models/product.js";
+import Category from "../models/category.js";
 // Validation
-import {
-  validateProduct,
-  validateImagesProduct,
-} from "./validations/products.js";
+import { validateProduct } from "./validations/products.js";
+// Helpers
+import { removeProductFiles } from "./helpers/removeProductFiles.js";
 // Npm packages
 import mongoose from "mongoose";
 import _ from "lodash";
@@ -17,7 +17,42 @@ import slugify from "slugify";
  * @returns errors ? response with relevant error message : created product
  */
 export const createProduct = async (req, res) => {
-  console.log("Product created");
+  // Data validation. Remove saved files if error
+  const validation = validateProduct(req.body);
+  if (validation.error) {
+    removeProductFiles(req.files); // Remove saved files from directory
+    return res.status(400).send(validation.error.details[0].message);
+  }
+
+  // Create slug property
+  req.body.slug = slugify(req.body.name).toLocaleLowerCase();
+
+  // Check category exists. Remove files if it does not.]
+  const category = await Category.findById(req.body.category);
+  if (!category) {
+    removeProductFiles(req.files); // Remove saved files from directory
+    return res.status(400).send(`"Category" with given id not found`);
+  }
+
+  // Save product in database
+  const images = req.files.map((file) => file.path); // Extract files paths
+  // Merge all properties
+  let product = Object.assign(
+    _.pick(req.body, [
+      "name",
+      "slug",
+      "brand",
+      "description",
+      "price",
+      "category",
+      "stock",
+    ]),
+    { images: images }
+  );
+
+  product = new Product(product);
+  product.save();
+  res.send(product);
 };
 
 /**
