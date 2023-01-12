@@ -1254,3 +1254,482 @@
   level: 'error',
   timestamp: '2023-01-12T20:33:51.592Z'
 }
+{
+  message: 'Unexpected field',
+  level: 'error',
+  timestamp: '2023-01-12T21:08:09.837Z'
+}
+{
+  error: TypeError: uploadFiles.array is not a function
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/routes/products.js:20:41
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: uploadFiles.array is not a function\n' +
+    'TypeError: uploadFiles.array is not a function\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/routes/products.js:20:41\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'TypeError: uploadFiles.array is not a function\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/routes/products.js:20:41\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Thu Jan 12 2023 16:14:56 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 5080,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 81379328,
+      heapTotal: 59887616,
+      heapUsed: 34493720,
+      external: 25794226,
+      arrayBuffers: 18845111
+    }
+  },
+  os: {
+    loadavg: [ 1.986328125, 1.97607421875, 2.21142578125 ],
+    uptime: 25470
+  },
+  trace: [
+    {
+      column: 41,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/routes/products.js',
+      function: null,
+      line: 20,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-12T21:14:56.402Z'
+}
+{
+  message: 'Unexpected field',
+  level: 'error',
+  timestamp: '2023-01-12T21:15:34.467Z'
+}
+{
+  message: `Product validation failed: images.0: Cast to [string] failed for value "[\\n' +\n` +
+    "  '  {\\n' +\n" +
+    `  "    img0: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673560059575.jpeg'\\n" +\n` +
+    "  '  },\\n' +\n" +
+    "  '  {\\n' +\n" +
+    `  "    img1: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673560059576.jpeg'\\n" +\n` +
+    "  '  }\\n' +\n" +
+    `  ']" (type string) at path "images.0" because of "CastError"`,
+  level: 'error',
+  timestamp: '2023-01-12T21:47:39.703Z'
+}
+{
+  message: `Product validation failed: images.0: Cast to [string] failed for value "[\\n' +\n` +
+    "  '  {\\n' +\n" +
+    `  "    img0: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673560139634.jpeg'\\n" +\n` +
+    "  '  },\\n' +\n" +
+    "  '  {\\n' +\n" +
+    `  "    img1: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673560139635.jpeg'\\n" +\n` +
+    "  '  }\\n' +\n" +
+    `  ']" (type string) at path "images.0" because of "CastError"`,
+  level: 'error',
+  timestamp: '2023-01-12T21:48:59.764Z'
+}
+{
+  message: `Product validation failed: images.0: Cast to [string] failed for value "[\\n' +\n` +
+    "  '  {\\n' +\n" +
+    `  "    img1: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673560161177.jpeg'\\n" +\n` +
+    "  '  },\\n' +\n" +
+    "  '  {\\n' +\n" +
+    `  "    img2: 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-images-1673560161178.jpeg'\\n" +\n` +
+    "  '  }\\n' +\n" +
+    `  ']" (type string) at path "images.0" because of "CastError"`,
+  level: 'error',
+  timestamp: '2023-01-12T21:49:21.310Z'
+}
+{
+  message: 'Unexpected field',
+  level: 'error',
+  timestamp: '2023-01-12T22:34:04.652Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:39:02.397Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:47:00.671Z'
+}
+{
+  message: 'image is not defined',
+  level: 'error',
+  timestamp: '2023-01-12T22:48:08.483Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:48:18.682Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:48:47.503Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:49:07.473Z'
+}
+{
+  message: 'fieldname is not defined',
+  level: 'error',
+  timestamp: '2023-01-12T22:50:07.912Z'
+}
+{
+  message: 'fieldname is not defined',
+  level: 'error',
+  timestamp: '2023-01-12T22:50:20.096Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:51:20.426Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:51:38.646Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T22:55:41.419Z'
+}
+{
+  message: 'req.files.map is not a function',
+  level: 'error',
+  timestamp: '2023-01-12T23:17:34.726Z'
+}
+{
+  error: TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'
+      at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)
+      at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:21:12)
+      at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7,
+  level: 'error',
+  message: "unhandledRejection: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    "TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    '    at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)\n' +
+    '    at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:21:12)\n' +
+    '    at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7',
+  stack: "TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    '    at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)\n' +
+    '    at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:21:12)\n' +
+    '    at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7',
+  exception: true,
+  date: 'Thu Jan 12 2023 18:26:27 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6086,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 75972608,
+      heapTotal: 30003200,
+      heapUsed: 27125296,
+      external: 21591989,
+      arrayBuffers: 18350972
+    }
+  },
+  os: {
+    loadavg: [ 3.15966796875, 2.99658203125, 2.7451171875 ],
+    uptime: 33361
+  },
+  trace: [
+    {
+      column: 20,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js',
+      function: 'DerivedLogger.log',
+      line: 214,
+      method: 'log',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js',
+      function: 'removeProductFiles',
+      line: 21,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js',
+      function: 'createProduct',
+      line: 33,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/task_queues',
+      function: 'processTicksAndRejections',
+      line: 96,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js',
+      function: null,
+      line: 9,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-12T23:26:27.291Z'
+}
+{
+  error: TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'
+      at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)
+      at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:25:12)
+      at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7,
+  level: 'error',
+  message: "unhandledRejection: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    "TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    '    at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)\n' +
+    '    at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:25:12)\n' +
+    '    at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7',
+  stack: "TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    '    at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)\n' +
+    '    at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:25:12)\n' +
+    '    at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7',
+  exception: true,
+  date: 'Thu Jan 12 2023 18:31:25 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6164,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 95371264,
+      heapTotal: 63033344,
+      heapUsed: 28343392,
+      external: 27249595,
+      arrayBuffers: 18357565
+    }
+  },
+  os: { loadavg: [ 2.90625, 2.8359375, 2.732421875 ], uptime: 33659 },
+  trace: [
+    {
+      column: 20,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js',
+      function: 'DerivedLogger.log',
+      line: 214,
+      method: 'log',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js',
+      function: 'removeProductFiles',
+      line: 25,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js',
+      function: 'createProduct',
+      line: 33,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/task_queues',
+      function: 'processTicksAndRejections',
+      line: 96,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js',
+      function: null,
+      line: 9,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-12T23:31:25.150Z'
+}
+{
+  error: TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'
+      at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)
+      at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:27:12)
+      at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7,
+  level: 'error',
+  message: "unhandledRejection: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    "TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    '    at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)\n' +
+    '    at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:27:12)\n' +
+    '    at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7',
+  stack: "TypeError: Cannot create property 'Symbol(level)' on string 'files.map is not a function'\n" +
+    '    at DerivedLogger.log (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js:214:20)\n' +
+    '    at removeProductFiles (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js:27:12)\n' +
+    '    at createProduct (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js:33:5)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js:9:7',
+  exception: true,
+  date: 'Thu Jan 12 2023 18:35:17 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6212,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 72716288,
+      heapTotal: 30003200,
+      heapUsed: 27679920,
+      external: 21547226,
+      arrayBuffers: 18344918
+    }
+  },
+  os: {
+    loadavg: [ 4.47265625, 3.310546875, 2.94677734375 ],
+    uptime: 33891
+  },
+  trace: [
+    {
+      column: 20,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/winston/lib/winston/logger.js',
+      function: 'DerivedLogger.log',
+      line: 214,
+      method: 'log',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/helpers/removeProductFiles.js',
+      function: 'removeProductFiles',
+      line: 27,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/controllers/products.js',
+      function: 'createProduct',
+      line: 33,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/task_queues',
+      function: 'processTicksAndRejections',
+      line: 96,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'async file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/catchErrors.js',
+      function: null,
+      line: 9,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-01-12T23:35:17.524Z'
+}

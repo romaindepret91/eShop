@@ -20,7 +20,7 @@ export const createProduct = async (req, res) => {
   // Data validation. Remove saved files if error
   const validation = validateProduct(req.body);
   if (validation.error) {
-    removeProductFiles(req.files); // Remove saved files from directory
+    removeProductFiles(req.files, true); // Remove saved files from directory
     return res.status(400).send(validation.error.details[0].message);
   }
 
@@ -30,12 +30,21 @@ export const createProduct = async (req, res) => {
   // Check category exists. Remove files if it does not.]
   const category = await Category.findById(req.body.category);
   if (!category) {
-    removeProductFiles(req.files); // Remove saved files from directory
+    removeProductFiles(req.files, true); // Remove saved files from directory
     return res.status(400).send(`"Category" with given id not found`);
   }
 
   // Save product in database
-  const images = req.files.map((file) => file.path); // Extract files paths
+  const images = [];
+  for (let image in req.files) {
+    const imageObject = req.files[image][0];
+    // Extract file path and name
+    const imageKey = imageObject["fieldname"];
+    const imageValue = imageObject["path"];
+    const newImageObject = { [imageKey]: imageValue };
+    images.push(newImageObject);
+  }
+
   // Merge all properties
   const product = await new Product(
     Object.assign(
@@ -59,7 +68,9 @@ export const createProduct = async (req, res) => {
  * @param {object} req
  * @param {object} res
  */
-export const updateProduct = async (req, res) => {};
+export const updateProduct = async (req, res) => {
+  res.send("update product");
+};
 
 /**
  * Delete a product of a given id in database
@@ -78,7 +89,7 @@ export const deleteProduct = async (req, res) => {
   if (!product) return res.status(404).send("Product with given id not found");
 
   // Remove files from server
-  removeProductFiles(product.images);
+  removeProductFiles(product.images, false);
   res.send(product);
 };
 

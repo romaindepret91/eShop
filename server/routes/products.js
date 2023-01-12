@@ -17,7 +17,7 @@ import catchErrors from "../middlewares/catchErrors.js";
 // Create new product
 router.post(
   "/products",
-  [isUserLoggedIn, isAdmin, uploadFiles.array("images")],
+  [isUserLoggedIn, isAdmin, uploadFiles],
   catchErrors(createProduct)
 );
 
