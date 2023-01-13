@@ -1753,3 +1753,33 @@
   level: 'error',
   timestamp: '2023-01-13T16:49:24.229Z'
 }
+{
+  message: 'i is not defined',
+  level: 'error',
+  timestamp: '2023-01-13T18:38:10.584Z'
+}
+{
+  message: 'replace is not defined',
+  level: 'error',
+  timestamp: '2023-01-13T18:43:38.767Z'
+}
+{
+  message: "ENOENT: no such file or directory, rename 'public/uploads/users/user-63c0392f2ed1776e613c6d2a/products/product-image3-1673635672773.jpeg' -> 'public/uploads/users/user-62c0392f2ed1776e613c6d2a/products/product-63c1a758372ebbb0f11bd322-image3.jpeg'",
+  level: 'error',
+  timestamp: '2023-01-13T18:47:53.056Z'
+}
+{
+  message: 'images is not defined',
+  level: 'error',
+  timestamp: '2023-01-13T20:24:29.075Z'
+}
+{
+  message: 'handleProductFiles is not defined',
+  level: 'error',
+  timestamp: '2023-01-13T21:13:32.085Z'
+}
+{
+  message: 'Image "image4" not found',
+  level: 'error',
+  timestamp: '2023-01-13T21:16:45.227Z'
+}

@@ -5,11 +5,11 @@ import Category from "../models/category.js";
 import { validateProduct } from "./validations/products.js";
 // Helpers
 import { removeProductFiles } from "./helpers/removeProductFiles.js";
+import { handleUpdateProductFiles } from "./helpers/handleUpdateProductFiles.js";
 // Npm packages
 import mongoose from "mongoose";
 import slugify from "slugify";
 import _ from "lodash";
-import fs from "fs";
 
 /**
  * Create new product in the database
@@ -48,27 +48,10 @@ export const createProduct = async (req, res) => {
     ])
   ).save();
 
-  // Remodel images porperty
-  const images = [];
-  console.log(req.files);
-  for (let image in req.files) {
-    const imageObject = req.files[image][0];
-    // Extract file path and name
-    const imageKey = imageObject["fieldname"];
-    let imagePath = imageObject["path"];
-    imagePath = imagePath.replace(
-      imagePath.substring(imagePath.indexOf("."), imagePath.indexOf(".") - 14),
-      ""
-    );
-    imagePath = imagePath.split("-");
-    imagePath.splice(2, 0, product._id.toString());
-    imagePath = imagePath.join("-"); // New file path
-    const newImageObject = { [imageKey]: imagePath };
-    images.push(newImageObject);
-    fs.renameSync(imageObject["path"], imagePath); // Rename file in public directory
-  }
+  // Handle files saving
+  const images = handleUpdateProductFiles(req.files, product, true);
 
-  // Update product images property
+  // Update images property of product
   product = await Product.findByIdAndUpdate(
     product._id,
     {
@@ -109,19 +92,8 @@ export const updateProduct = async (req, res) => {
     return res.status(400).send(`"Category" with given id not found`);
   }
 
-  // Remodel images porperty
-  const images = [];
-  for (let image in req.files) {
-    const imageObject = req.files[image][0];
-    // Extract file path and name
-    const imageKey = imageObject["fieldname"];
-    const imagePath = imageObject["path"];
-    const newImageObject = { [imageKey]: imagePath };
-    images.push(newImageObject);
-  }
-
   // Check if product with given id exists in database and update
-  const product = await Product.findByIdAndUpdate(
+  let product = await Product.findByIdAndUpdate(
     id,
     Object.assign(
       _.pick(req.body, [
@@ -132,15 +104,25 @@ export const updateProduct = async (req, res) => {
         "price",
         "category",
         "stock",
-      ]),
-      { images: images }
+      ])
     ),
     { new: true }
   );
   if (!product) {
-    removeProductFiles(req.files, true); // Remove saved files from directory
     return res.status(404).send("Product with given id not found");
   }
+  if (!_.isEmpty(req.files)) {
+    const images = handleUpdateProductFiles(req.files, product, false);
+
+    product = await Product.findByIdAndUpdate(
+      id,
+      {
+        images: images,
+      },
+      { new: true }
+    );
+  }
+
   res.json(product);
 };
 
