@@ -1,6 +1,14 @@
 import fs from "fs";
 import _ from "lodash";
+import { removeProductFiles } from "./removeProductFiles.js";
 
+/**
+ * Handle the import of images files: redefine path if necessary (on first upload) and store images paths in returned array or replace images on update
+ * @param {object} files Files sent in req.files object
+ * @param {object} product Product object
+ * @param {bollean} onUpload Determine the behaviour of function
+ * @returns images: array containing the images paths
+ */
 export const handleUpdateProductFiles = (files, product, onUpload) => {
   let images = [];
   let i = 1;
@@ -45,7 +53,7 @@ export const handleUpdateProductFiles = (files, product, onUpload) => {
       for (let image in files) {
         const imageObject = files[image][0];
         // Extract and redefine file path and field name
-        let imageKey = imageObject["fieldname"];
+        const imageKey = imageObject["fieldname"];
         let imagePath;
         // Check if image reveived is actually in database: search for its key
         let isImageinDB = false;
@@ -55,7 +63,12 @@ export const handleUpdateProductFiles = (files, product, onUpload) => {
             return (isImageinDB = true);
           }
         });
-        if (!isImageinDB) throw new Error(`Image "${imageKey}" not found`);
+        if (!isImageinDB) {
+          removeProductFiles(files, true);
+          throw new Error(
+            `Image "${imageKey}" not found. Update of all images aborted.`
+          );
+        }
         fs.renameSync(imageObject["path"], imagePath); // Rename file in public directory
       }
       images = product.images;

@@ -1783,3 +1783,58 @@
   level: 'error',
   timestamp: '2023-01-13T21:16:45.227Z'
 }
+{
+  message: 'Image "image4" not found. Update of images aborted',
+  level: 'error',
+  timestamp: '2023-01-13T21:28:57.352Z'
+}
+{
+  message: 'Image "image4" not found. Update of all images aborted.',
+  level: 'error',
+  timestamp: '2023-01-13T21:29:23.133Z'
+}
+{
+  message: 'Image "image4" not found. Update of all images aborted.',
+  level: 'error',
+  timestamp: '2023-01-13T21:30:10.496Z'
+}
+{
+  message: 'Image "image4" not found. Update of all images aborted.',
+  level: 'error',
+  timestamp: '2023-01-13T21:32:36.842Z'
+}
+{
+  message: 'removeFilesAsync is not defined',
+  level: 'error',
+  timestamp: '2023-01-13T22:16:10.455Z'
+}
+{
+  message: 'Callback must be a function. Received undefined',
+  level: 'error',
+  timestamp: '2023-01-13T22:16:51.303Z'
+}
+{
+  message: 'Callback must be a function. Received undefined',
+  level: 'error',
+  timestamp: '2023-01-13T22:18:11.592Z'
+}
+{
+  message: 'Callback must be a function. Received undefined',
+  level: 'error',
+  timestamp: '2023-01-13T22:18:43.850Z'
+}
+{
+  message: 'Callback must be a function. Received undefined',
+  level: 'error',
+  timestamp: '2023-01-13T22:19:07.116Z'
+}
+{
+  message: 'Callback must be a function. Received undefined',
+  level: 'error',
+  timestamp: '2023-01-13T22:24:23.492Z'
+}
+{
+  message: 'Callback must be a function. Received undefined',
+  level: 'error',
+  timestamp: '2023-01-13T22:27:09.263Z'
+}

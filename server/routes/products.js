@@ -6,6 +6,7 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
+  deleteProductImage,
   getProducts,
   getOneProduct,
 } from "../controllers/products.js";
@@ -33,6 +34,13 @@ router.delete(
   "/products/:id",
   [isUserLoggedIn, isAdmin],
   catchErrors(deleteProduct)
+);
+
+// Delete an image of a product
+router.delete(
+  "/products/:id/:imageId",
+  [isUserLoggedIn, isAdmin],
+  catchErrors(deleteProductImage)
 );
 
 // Get all products

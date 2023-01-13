@@ -10,6 +10,7 @@ import { handleUpdateProductFiles } from "./helpers/handleUpdateProductFiles.js"
 import mongoose from "mongoose";
 import slugify from "slugify";
 import _ from "lodash";
+import fs from "fs";
 
 /**
  * Create new product in the database
@@ -136,7 +137,7 @@ export const deleteProduct = async (req, res) => {
   // Check if product id is valid
   const id = req.params.id;
   if (!mongoose.Types.ObjectId.isValid(id))
-    return res.status(400).send("Invalid product id format"); // check if valid
+    return res.status(400).send("Invalid product id format");
 
   // Check if product exists and delete
   const product = await Product.findByIdAndDelete(id);
@@ -145,6 +146,56 @@ export const deleteProduct = async (req, res) => {
   // Remove files from server
   removeProductFiles(product.images, false);
   res.send(product);
+};
+
+export const deleteProductImage = async (req, res) => {
+  // Check if product id is valid
+  const id = req.params.id;
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(400).send("Invalid product id format");
+
+  // Check if product with given id exists in database
+  let product = await Product.findById(id);
+  if (!product) return res.status(404).send("Product with given id not found");
+
+  // Check if product image exists
+  const imageId = req.params.imageId;
+  if (!imageId) return res.status(400).send("Image id must be provided");
+
+  // Delete image file from server and delete image object from images property
+  const images = product.images.filter((image) => {
+    if (fs.existsSync(image[imageId])) fs.unlinkSync(image[imageId]);
+    return !(imageId in image);
+  });
+
+  // Reorder indexes and images path
+  images.forEach((image, index) => {
+    const oldImageKey = Object.keys(image).toString();
+    let imagePath = image[oldImageKey];
+    // Replace image numbers in path with ordered numbers
+    imagePath = imagePath.replace(
+      imagePath.substring(imagePath.indexOf("."), imagePath.indexOf(".") - 6),
+      `image${index + 1}`
+    );
+    // Update Key
+    const newKey = `image${index + 1}`;
+    // Create new image objet
+    image[newKey] = imagePath;
+    // Rename file in public directory
+    fs.renameSync(image[oldImageKey], imagePath);
+    // Delete old object
+    delete image[oldImageKey];
+  });
+
+  product = await Product.findByIdAndUpdate(
+    id,
+    {
+      images: images,
+    },
+    { new: true }
+  );
+
+  res.json(product);
 };
 
 /**
