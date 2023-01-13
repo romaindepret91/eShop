@@ -24,7 +24,7 @@ router.post(
 // Update a product
 router.put(
   "/products/:id",
-  [isUserLoggedIn, isAdmin],
+  [isUserLoggedIn, isAdmin, uploadFiles],
   catchErrors(updateProduct)
 );
 

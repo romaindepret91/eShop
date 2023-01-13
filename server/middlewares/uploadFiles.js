@@ -30,6 +30,7 @@ const multerStorage = multer.diskStorage({
  */
 const multerFilter = (req, file, cb) => {
   const validExtensions = ["jpeg", "jpg", "png", "webp"];
+  console.log(file);
   const ext = file.mimetype.split("/")[1];
   const extIsValid = validExtensions.indexOf(ext) > -1;
   extIsValid

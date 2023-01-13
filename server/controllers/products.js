@@ -9,6 +9,7 @@ import { removeProductFiles } from "./helpers/removeProductFiles.js";
 import mongoose from "mongoose";
 import slugify from "slugify";
 import _ from "lodash";
+import fs from "fs";
 
 /**
  * Create new product in the database
@@ -27,26 +28,101 @@ export const createProduct = async (req, res) => {
   // Create slug property
   req.body.slug = slugify(req.body.name).toLocaleLowerCase();
 
-  // Check category exists. Remove files if it does not.]
+  // Check category exists. Remove files if it does not
   const category = await Category.findById(req.body.category);
   if (!category) {
     removeProductFiles(req.files, true); // Remove saved files from directory
     return res.status(400).send(`"Category" with given id not found`);
   }
 
-  // Save product in database
+  // Merge all properties and save in database
+  let product = await new Product(
+    _.pick(req.body, [
+      "name",
+      "slug",
+      "brand",
+      "description",
+      "price",
+      "category",
+      "stock",
+    ])
+  ).save();
+
+  // Remodel images porperty
+  const images = [];
+  console.log(req.files);
+  for (let image in req.files) {
+    const imageObject = req.files[image][0];
+    // Extract file path and name
+    const imageKey = imageObject["fieldname"];
+    let imagePath = imageObject["path"];
+    imagePath = imagePath.replace(
+      imagePath.substring(imagePath.indexOf("."), imagePath.indexOf(".") - 14),
+      ""
+    );
+    imagePath = imagePath.split("-");
+    imagePath.splice(2, 0, product._id.toString());
+    imagePath = imagePath.join("-"); // New file path
+    const newImageObject = { [imageKey]: imagePath };
+    images.push(newImageObject);
+    fs.renameSync(imageObject["path"], imagePath); // Rename file in public directory
+  }
+
+  // Update product images property
+  product = await Product.findByIdAndUpdate(
+    product._id,
+    {
+      images: images,
+    },
+    { new: true }
+  );
+
+  res.json(product);
+};
+
+/**
+ * Update a product of a given id in database
+ * @param {object} req
+ * @param {object} res
+ */
+export const updateProduct = async (req, res) => {
+  // Check if product id is received and valid
+  const id = req.params.id;
+  if (!id) return res.status(400).send("Id product must be provided"); // check if received
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(400).send("Invalid product id format"); // check if valid
+
+  // Data validation. Remove saved files if error
+  const validation = validateProduct(req.body);
+  if (validation.error) {
+    removeProductFiles(req.files, true); // Remove saved files from directory
+    return res.status(400).send(validation.error.details[0].message);
+  }
+
+  // Create slug property
+  req.body.slug = slugify(req.body.name).toLocaleLowerCase();
+
+  // Check category exists. Remove files if it does not
+  const category = await Category.findById(req.body.category);
+  if (!category) {
+    removeProductFiles(req.files, true); // Remove saved files from directory
+    return res.status(400).send(`"Category" with given id not found`);
+  }
+
+  // Remodel images porperty
   const images = [];
   for (let image in req.files) {
     const imageObject = req.files[image][0];
     // Extract file path and name
     const imageKey = imageObject["fieldname"];
-    const imageValue = imageObject["path"];
-    const newImageObject = { [imageKey]: imageValue };
+    const imagePath = imageObject["path"];
+    const newImageObject = { [imageKey]: imagePath };
     images.push(newImageObject);
   }
 
-  // Merge all properties
-  const product = await new Product(
+  // Check if product with given id exists in database and update
+  const product = await Product.findByIdAndUpdate(
+    id,
     Object.assign(
       _.pick(req.body, [
         "name",
@@ -58,18 +134,14 @@ export const createProduct = async (req, res) => {
         "stock",
       ]),
       { images: images }
-    )
-  ).save();
+    ),
+    { new: true }
+  );
+  if (!product) {
+    removeProductFiles(req.files, true); // Remove saved files from directory
+    return res.status(404).send("Product with given id not found");
+  }
   res.json(product);
-};
-
-/**
- * Update a product of a given id in database
- * @param {object} req
- * @param {object} res
- */
-export const updateProduct = async (req, res) => {
-  res.send("update product");
 };
 
 /**
@@ -119,7 +191,7 @@ export const getOneProduct = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(400).send("Invalid product id format"); // check if valid
 
-  // Check if produtc with given id exists in database
+  // Check if product with given id exists in database
   const product = await Product.findById(id).populate("category");
   if (!product) return res.status(404).send("Product with given id not found");
 

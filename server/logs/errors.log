@@ -1733,3 +1733,23 @@
   ],
   timestamp: '2023-01-12T23:35:17.524Z'
 }
+{
+  message: 'Product.findByIdAndUpdate(...).save is not a function',
+  level: 'error',
+  timestamp: '2023-01-13T15:28:10.003Z'
+}
+{
+  message: 'imagePath.spit is not a function',
+  level: 'error',
+  timestamp: '2023-01-13T16:01:03.568Z'
+}
+{
+  message: 'product.findByIdAndUpdate is not a function',
+  level: 'error',
+  timestamp: '2023-01-13T16:35:12.922Z'
+}
+{
+  message: 'fs is not defined',
+  level: 'error',
+  timestamp: '2023-01-13T16:49:24.229Z'
+}
