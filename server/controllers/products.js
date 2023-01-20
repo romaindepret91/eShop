@@ -183,7 +183,7 @@ export const deleteProductImage = async (req, res) => {
     image[newKey] = imagePath;
     // Rename file in public directory
     fs.renameSync(image[oldImageKey], imagePath);
-    // Delete old object
+    // Delete old image object
     delete image[oldImageKey];
   });
 

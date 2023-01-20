@@ -8,7 +8,7 @@ import dataValidation from "./startup/dataValidation.js";
 const app = express();
 const port = process.env.PORT || 3000;
 
-dotenv.config(); // Access to environment variables
+dotenv.config(); // Reads environment variables in env file
 config(); // Configuration set up
 connectDB(); // Connection to database
 dataValidation(); // Data validation helpers
