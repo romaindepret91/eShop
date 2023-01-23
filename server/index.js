@@ -20,4 +20,4 @@ const server = app.listen(port, () => {
   logger.info(`Server running on port ${port}`);
 });
 
-module.exports = server;
+module.exports = server; // Exports server for testing

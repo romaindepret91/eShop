@@ -2,7 +2,7 @@ let server;
 
 describe("Categories", () => {
   beforeEach(async () => {
-    server = require("../../index");
+    server = require("../../../index");
   });
   afterEach(async () => {
     await server.close();

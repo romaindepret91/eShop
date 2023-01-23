@@ -14,6 +14,6 @@ process.env.MONGODB_URI = `mongodb+srv://romaindepret91:${
 export default function () {
   mongoose
     .connect(process.env.MONGODB_URI)
-    .then(console.log("Connected to database..."))
+    .then(console.log(`Connected to database ${config.get("mongoDB_name")}...`))
     .catch((err) => console.log("DB ERROR => ", err));
 }
