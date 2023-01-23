@@ -14,6 +14,20 @@ import catchErrors from "../middlewares/catchErrors.js";
 
 const router = express.Router();
 
+// Get all categories
+router.get(
+  "/categories",
+  [isUserLoggedIn, isAdmin],
+  catchErrors(getCategories)
+);
+
+// Get one category
+router.get(
+  "/categories/:slug",
+  [isUserLoggedIn, isAdmin],
+  catchErrors(getOneCategory)
+);
+
 // Create new category
 router.post(
   "/categories",
@@ -35,17 +49,4 @@ router.delete(
   catchErrors(deleteCategory)
 );
 
-// Get all categories
-router.get(
-  "/categories",
-  [isUserLoggedIn, isAdmin],
-  catchErrors(getCategories)
-);
-
-// Get one category
-router.get(
-  "/categories/:slug",
-  [isUserLoggedIn, isAdmin],
-  catchErrors(getOneCategory)
-);
 export default router;

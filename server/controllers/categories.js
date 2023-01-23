@@ -37,7 +37,7 @@ export const createCategory = async (req, res) => {
 };
 
 /**
- * Update a category of a given id in database
+ * Update a category of a given id in DB
  * @param {object} req
  * @param {object} res
  */

@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
-import config from "config";
+import dotenv from "dotenv";
+dotenv.config();
 
 /**
  *  Allow access to route if auth token is provided
@@ -14,7 +15,7 @@ export function isUserLoggedIn(req, res, next) {
     return res.status(401).send("Access denied. No token provided");
 
   try {
-    const decodedToken = jwt.verify(authToken, config.get("jwtPrivateKey"));
+    const decodedToken = jwt.verify(authToken, process.env.JWT_PRIVATEKEY);
     req.user = decodedToken;
     next();
   } catch (ex) {
