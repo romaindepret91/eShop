@@ -7,7 +7,7 @@ import dataValidation from "./startup/dataValidation.js";
 import { logger } from "./logs/logger.js";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.NODE_ENV === "test" ? 0 : process.env.PORT || 3000; // Set Port 0 in test mode to allow parallel running of test suites
 
 dotenv.config(); // Reads environment variables in env file
 config(); // Configuration set up

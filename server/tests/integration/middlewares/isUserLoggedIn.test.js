@@ -15,7 +15,7 @@ describe("isUserLoggedIn", () => {
   };
   beforeEach(async () => {
     server = require("../../../index");
-    user = new User({ isAdmin: true });
+    user = new User({ isAdmin: true, email: "user@user.com" });
     authToken = user.generateAuthToken();
     await User.collection.insertOne(user);
   });
@@ -27,13 +27,18 @@ describe("isUserLoggedIn", () => {
 
   it("should return 401 if no token is provided", async () => {
     authToken = "";
-    const result = await execute();
-    expect(result.status).toBe(401);
+    const res = await execute();
+    expect(res.status).toBe(401);
   });
   it("should return 400 if token is invalid", async () => {
     authToken = "a";
-    const result = await execute();
-    expect(result.status).toBe(400);
+    const res = await execute();
+    expect(res.status).toBe(400);
+  });
+  it("should return 400 if user not found in DB", async () => {
+    authToken = new User().generateAuthToken();
+    const res = await execute();
+    expect(res.status).toBe(400);
   });
   it("should return 200 if token is valid", async () => {
     const res = await execute();
