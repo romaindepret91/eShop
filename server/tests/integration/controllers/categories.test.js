@@ -7,6 +7,7 @@ describe("Categories", () => {
   let server;
   let authToken;
   let user;
+
   beforeEach(async () => {
     server = require("../../../index");
     user = new User({ isAdmin: true, email: "categories@categories.com" });
@@ -17,11 +18,13 @@ describe("Categories", () => {
       { name: "category 2", slug: "category-2" },
     ]);
   });
+
   afterEach(async () => {
     await server.close();
     await User.findByIdAndRemove(user._id);
     await Category.collection.drop();
   });
+
   describe("getCategories", () => {
     it("should return all categories", async () => {
       const res = await request(server)
