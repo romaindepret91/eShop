@@ -148,6 +148,12 @@ export const deleteProduct = async (req, res) => {
   res.send(product);
 };
 
+/**
+ *
+ * @param {object} req
+ * @param {object} res
+ * @returns
+ */
 export const deleteProductImage = async (req, res) => {
   // Check if product id is valid
   const id = req.params.id;
