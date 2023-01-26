@@ -22,7 +22,7 @@ describe("Categories", () => {
   afterEach(async () => {
     await server.close();
     await User.findByIdAndRemove(user._id);
-    await Category.collection.drop();
+    await Category.deleteMany({});
   });
 
   describe("getCategories", () => {
@@ -115,7 +115,6 @@ describe("Categories", () => {
       await execute();
       const newCategory = await Category.findOne({ slug: "category-3" });
 
-      expect(newCategory.slug === "category-3");
       expect(newCategory).not.toBe(null);
     });
 

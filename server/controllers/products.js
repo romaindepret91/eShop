@@ -226,7 +226,6 @@ export const getProducts = async (req, res) => {
 export const getOneProduct = async (req, res) => {
   // Check if product id is received and valid
   const id = req.query.id;
-  if (!id) return res.status(400).send("Id product must be provided"); // check if received
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(400).send("Invalid product id format"); // check if valid
 

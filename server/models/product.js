@@ -40,7 +40,7 @@ const productSchema = new Schema(
     category: {
       type: ObjectId,
       ref: "Category",
-      reuiqred: true,
+      required: true,
     },
     stock: {
       type: Number,
