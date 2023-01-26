@@ -10,11 +10,12 @@ const multerStorage = multer.diskStorage({
     cb(null, "public/uploads");
   },
   filename: (req, file, cb) => {
+    const user = JSON.parse(req.body.user);
     const ext = file.mimetype.split("/")[1];
-    mkdirp.sync(`public/uploads/users/user-${req.user._id}/products`); // Create directory id does not exist
+    mkdirp.sync(`public/uploads/users/user-${user._id}/products`); // Create directory id does not exist
     cb(
       null,
-      `users/user-${req.user._id}/products/product-${
+      `users/user-${user._id}/products/product-${
         file.fieldname
       }-${Date.now()}.${ext}`
     );

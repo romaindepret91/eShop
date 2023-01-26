@@ -110,7 +110,7 @@ describe("Categories", () => {
       expect(res.text).toBe("Category name already taken");
     });
 
-    it("should save the category if valid", async () => {
+    it("should save the category in DB if valid", async () => {
       payload = { name: "category 3" };
       await execute();
       const newCategory = await Category.findOne({ slug: "category-3" });
