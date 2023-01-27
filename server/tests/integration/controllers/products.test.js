@@ -42,9 +42,9 @@ describe("Products", () => {
 
     it("should return 400 if category sent does not exist", async () => {
       payload = {
-        name: "product1",
-        brand: "brand1",
-        description: "description1",
+        name: "product0",
+        brand: "brand0",
+        description: "description0",
         price: 10,
         category: mongoose.Types.ObjectId(),
         stock: 1,
@@ -64,7 +64,7 @@ describe("Products", () => {
         stock: 1,
       };
       await execute();
-      const product = Product.findOne({ name: "product1" });
+      const product = await Product.findOne({ name: "product1" });
       expect(product).not.toBe(null);
     });
 
@@ -79,7 +79,7 @@ describe("Products", () => {
       };
       const res = await execute();
       expect(res.status).toBe(200);
-      expect(res.body.name === "product1");
+      expect(res.body.name === "product2");
     });
   });
 
@@ -165,6 +165,153 @@ describe("Products", () => {
       const res = await execute();
       expect(res.status).toBe(200);
       expect(res.body._id === product._id);
+    });
+  });
+
+  describe("deleteProduct", () => {
+    let id;
+    let product;
+
+    const execute = async () => {
+      return await request(server)
+        .delete(`/api/products/${id}`)
+        .set("authToken", authToken);
+    };
+
+    beforeEach(async () => {
+      product = new Product({
+        name: "product6",
+        brand: "brand6",
+        description: "description6",
+        price: 10,
+        category: category._id,
+        stock: 1,
+      });
+      await Product.collection.insertOne(product);
+    });
+
+    it("should return 400 if product id not valid", async () => {
+      id = "a";
+      const res = await execute();
+      expect(res.status).toBe(400);
+    });
+
+    it("should return 404 if product does not exist", async () => {
+      id = mongoose.Types.ObjectId();
+      const res = await execute();
+      expect(res.status).toBe(404);
+    });
+
+    it("should return the deleted product if valid request", async () => {
+      id = product._id;
+      const res = await execute();
+      expect(res.status).toBe(200);
+      expect(res.body._id === product._id);
+    });
+  });
+
+  describe("updateProduct", () => {
+    let id;
+    let product;
+    let payload;
+
+    const execute = async () => {
+      return await request(server)
+        .put(`/api/products/${id}`)
+        .set("authToken", authToken)
+        .send(payload);
+    };
+
+    beforeEach(async () => {
+      product = new Product({
+        name: "product7",
+        brand: "brand7",
+        description: "description7",
+        price: 10,
+        category: category._id,
+        stock: 1,
+      });
+      await Product.collection.insertOne(product);
+    });
+
+    it("should return 400 if product id not valid", async () => {
+      id = "a";
+      payload = {
+        name: "product8",
+        brand: "brand8",
+        description: "description8",
+        price: 10,
+        category: category._id,
+        stock: 1,
+      };
+      const res = await execute();
+      expect(res.status).toBe(400);
+    });
+
+    it("should return 400 if sent data not valid", async () => {
+      id = product._id;
+      payload = {};
+      const res = await execute();
+      expect(res.status).toBe(400);
+    });
+
+    it("should return 400 if category id not valid", async () => {
+      id = product._id;
+      payload = {
+        name: "product8",
+        brand: "brand8",
+        description: "description8",
+        price: 10,
+        category: mongoose.Types.ObjectId(),
+        stock: 1,
+      };
+      const res = await execute();
+      expect(res.status).toBe(400);
+    });
+
+    it("should return 404 if product does not exist", async () => {
+      id = mongoose.Types.ObjectId();
+      payload = {
+        name: "product8",
+        brand: "brand8",
+        description: "description8",
+        price: 10,
+        category: category._id,
+        stock: 1,
+      };
+      const res = await execute();
+      expect(res.status).toBe(404);
+    });
+
+    it("should update the product in DB if valid request", async () => {
+      id = product._id;
+      payload = {
+        name: "product8",
+        brand: "brand8",
+        description: "description8",
+        price: 10,
+        category: category._id,
+        stock: 1,
+      };
+      await execute();
+      const updatedProduct = await Product.findById(product._id);
+      expect(updatedProduct).not.toBe(null);
+      expect(payload.name === updatedProduct.name);
+    });
+
+    it("should return the updated product if valid request", async () => {
+      id = product._id;
+      payload = {
+        name: "product9",
+        brand: "brand9",
+        description: "description9",
+        price: 10,
+        category: category._id,
+        stock: 1,
+      };
+      const res = await execute();
+      expect(res.status).toBe(200);
+      expect(res.body.name === payload.name);
     });
   });
 });

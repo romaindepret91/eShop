@@ -22,7 +22,11 @@ describe("Categories", () => {
   afterEach(async () => {
     await server.close();
     await User.findByIdAndRemove(user._id);
-    await Category.deleteMany({});
+    await Category.deleteMany({
+      slug: {
+        $in: ["category-1", "category-2", "category-3", "category-4"],
+      },
+    });
   });
 
   describe("getCategories", () => {
