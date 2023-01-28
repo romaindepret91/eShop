@@ -47,6 +47,7 @@ describe("Products", () => {
         description: "description0",
         price: 10,
         category: mongoose.Types.ObjectId(),
+        sizingGroup: "women",
         stock: 1,
       };
       const res = await execute();
@@ -61,6 +62,7 @@ describe("Products", () => {
         description: "description1",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       };
       await execute();
@@ -75,6 +77,7 @@ describe("Products", () => {
         description: "description2",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       };
       const res = await execute();
@@ -98,6 +101,7 @@ describe("Products", () => {
           description: "description3",
           price: 10,
           category: category._id,
+          sizingGroup: "women",
           stock: 1,
         },
         {
@@ -106,6 +110,7 @@ describe("Products", () => {
           description: "description4",
           price: 10,
           category: category._id,
+          sizingGroup: "women",
           stock: 1,
         },
       ]);
@@ -134,6 +139,7 @@ describe("Products", () => {
         description: "description5",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       });
       await Product.collection.insertOne(product);
@@ -185,6 +191,7 @@ describe("Products", () => {
         description: "description6",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       });
       await Product.collection.insertOne(product);
@@ -229,6 +236,7 @@ describe("Products", () => {
         description: "description7",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       });
       await Product.collection.insertOne(product);
@@ -242,6 +250,7 @@ describe("Products", () => {
         description: "description8",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       };
       const res = await execute();
@@ -263,6 +272,7 @@ describe("Products", () => {
         description: "description8",
         price: 10,
         category: mongoose.Types.ObjectId(),
+        sizingGroup: "women",
         stock: 1,
       };
       const res = await execute();
@@ -277,6 +287,7 @@ describe("Products", () => {
         description: "description8",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       };
       const res = await execute();
@@ -291,6 +302,7 @@ describe("Products", () => {
         description: "description8",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       };
       await execute();
@@ -307,6 +319,7 @@ describe("Products", () => {
         description: "description9",
         price: 10,
         category: category._id,
+        sizingGroup: "women",
         stock: 1,
       };
       const res = await execute();

@@ -13,6 +13,7 @@ export function validateProduct(product) {
     description: Joi.string().min(2).max(2000).required(),
     price: Joi.number().min(0.01).required(),
     category: Joi.objectId().required(),
+    sizingGroup: Joi.string().valid("women", "men", "kids").required(),
     stock: Joi.number().min(1).required(),
     sold: Joi.number().min(0),
     shipping: Joi.boolean(),

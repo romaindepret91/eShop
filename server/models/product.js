@@ -42,6 +42,12 @@ const productSchema = new Schema(
       ref: "Category",
       required: true,
     },
+    sizingGroup: {
+      type: String,
+      trim: true,
+      enum: ["women", "men", "kids"],
+      required: true,
+    },
     stock: {
       type: Number,
       required: true,

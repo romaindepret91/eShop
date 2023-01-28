@@ -1950,3 +1950,193 @@
   ],
   timestamp: '2023-01-20T17:29:57.153Z'
 }
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:45.997Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:46.808Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:47.597Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:48.528Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:57.779Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:58.693Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:45:59.593Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:46:00.512Z'
+}
+{
+  message: 'Method no longer accepts array arguments: valid',
+  level: 'error',
+  timestamp: '2023-01-28T15:46:01.874Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:47:56.539Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:47:57.596Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:50:43.688Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:50:44.722Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:51:21.935Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:51:22.972Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:52:13.086Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:52:14.099Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:56:56.773Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:56:57.804Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:58:30.638Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:58:31.680Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:59:20.215Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:59:21.322Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:59:55.062Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T15:59:56.128Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:04:41.281Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:05:22.179Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:05:23.242Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:08:07.801Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:08:08.855Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:10:07.601Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:10:08.689Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:19:12.076Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:19:13.088Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:19:25.490Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:19:26.814Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:22:49.653Z'
+}
+{
+  message: 'Product validation failed: sizingGroup: Path `sizingGroup` is required.',
+  level: 'error',
+  timestamp: '2023-01-28T16:22:50.714Z'
+}

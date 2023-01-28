@@ -45,6 +45,7 @@ export const createProduct = async (req, res) => {
       "description",
       "price",
       "category",
+      "sizingGroup",
       "stock",
     ])
   ).save();
@@ -103,6 +104,7 @@ export const updateProduct = async (req, res) => {
         "description",
         "price",
         "category",
+        "sizingGroup",
         "stock",
       ])
     ),
