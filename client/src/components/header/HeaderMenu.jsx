@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-export default function HeaderMenu() {
+export default function HeaderMenu({ setOpenSidePanel, openSidePanel }) {
   return (
     <div className="Header_headerMenu">
       <Navbar bg="light" expand="lg">
@@ -8,9 +8,13 @@ export default function HeaderMenu() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link>Home</Nav.Link>
+              <Nav.Link onClick={() => setOpenSidePanel(!openSidePanel)}>
+                All products
+              </Nav.Link>
+              <Nav.Link>Men</Nav.Link>
+              <Nav.Link>Women</Nav.Link>
+              <Nav.Link>Kids</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

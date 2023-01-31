@@ -1,11 +1,16 @@
 import HeaderMenu from "./HeaderMenu";
 import HeaderTop from "./HeaderTop";
+import HeaderCarousel from "./HeaderCarousel";
 
-export default function Header() {
+export default function Header({ setOpenSidePanel, openSidePanel }) {
   return (
     <div className="Header">
       <HeaderTop />
-      <HeaderMenu />
+      <HeaderMenu
+        setOpenSidePanel={setOpenSidePanel}
+        openSidePanel={openSidePanel}
+      />
+      <HeaderCarousel />
     </div>
   );
 }

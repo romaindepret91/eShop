@@ -6,7 +6,7 @@ import HeaderButtonGroup from "./HeaderButtonGroup";
 export default function HeaderTop() {
   return (
     <div className="Header_headerTop">
-      <Navbar bg="dark">
+      <Navbar bg="light">
         <Container className="d-flex">
           <Navbar.Brand href="#home">
             <HeaderLogo />
