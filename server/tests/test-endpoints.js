@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-import { uploadFiles } from "../middlewares/uploadFiles";
+import { uploadFiles } from "../middlewares/uploadFiles.js";
 
 export const testEndpoints = (app) => {
   app.use(

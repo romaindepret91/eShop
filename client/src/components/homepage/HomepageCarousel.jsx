@@ -2,11 +2,11 @@ import { Carousel, Button } from "react-bootstrap";
 import carousel1 from "../../assets/images/carousel1.jpeg";
 import carousel2 from "../../assets/images/carousel2.jpg";
 import carousel3 from "../../assets/images/carousel3.jpg";
-import "./HeaderCarousel.scss";
+import "./HomepageCarousel.scss";
 
-export default function HeaderCarousel() {
+export default function HomepageCarousel() {
   return (
-    <Carousel fade>
+    <Carousel fade className="mt-3">
       <Carousel.Item>
         <div
           style={{ backgroundImage: `url(${carousel1})` }}

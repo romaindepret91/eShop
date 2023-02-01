@@ -1,19 +1,22 @@
-import { useState } from "react";
-import Header from "./components/header/Header";
-import SidePanel from "./components/sidePanel/SidePanel";
+import { Routes, Route } from "react-router-dom";
+import { Header } from "./components/header/Header";
+import SizingGroupContextProvider from "./context/SizingGroupContext";
+import ProductsContextProvider from "./context/ProductsContext";
+import Homepage from "./components/homepage/Homepage";
+import ProductCatalog from "./components/products/ProductCatalog";
 
 export default function App() {
-  const [openSidePanel, setOpenSidePanel] = useState(false);
   return (
     <div className="App">
-      <Header
-        setOpenSidePanel={setOpenSidePanel}
-        openSidePanel={openSidePanel}
-      />
-      <SidePanel
-        openSidePanel={openSidePanel}
-        setOpenSidePanel={setOpenSidePanel}
-      />
+      <ProductsContextProvider>
+        <SizingGroupContextProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Homepage />}></Route>
+            <Route path="/products/*" element={<ProductCatalog />}></Route>
+          </Routes>
+        </SizingGroupContextProvider>
+      </ProductsContextProvider>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function HeaderTop() {
     <div className="Header_headerTop">
       <Navbar bg="light">
         <Container className="d-flex">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <HeaderLogo />
           </Navbar.Brand>
           <Container className="d-flex justify-content-end">

@@ -1,16 +1,25 @@
 import HeaderMenu from "./HeaderMenu";
 import HeaderTop from "./HeaderTop";
-import HeaderCarousel from "./HeaderCarousel";
+import SidePanel from "../sidePanel/SidePanel";
+import { useState, useContext, memo } from "react";
+import { SizingGroupContext } from "../../context/SizingGroupContext";
 
-export default function Header({ setOpenSidePanel, openSidePanel }) {
+export const Header = memo(() => {
+  const [openSidePanel, setOpenSidePanel] = useState(false);
+  const { sizingGroup, setSizingGroup } = useContext(SizingGroupContext);
   return (
-    <div className="Header">
+    <header className="Header">
       <HeaderTop />
       <HeaderMenu
         setOpenSidePanel={setOpenSidePanel}
         openSidePanel={openSidePanel}
+        setSizingGroup={setSizingGroup}
       />
-      <HeaderCarousel />
-    </div>
+      <SidePanel
+        openSidePanel={openSidePanel}
+        setOpenSidePanel={setOpenSidePanel}
+        sizingGroup={sizingGroup}
+      />
+    </header>
   );
-}
+});

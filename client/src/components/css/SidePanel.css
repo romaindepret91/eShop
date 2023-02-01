@@ -19,9 +19,33 @@
 }
 
 .SidePanel > .SidePanel-menu-wrapper {
-  width: 30%;
+  width: 100%;
   height: 100%;
   background-color: white;
+}
+
+@media only screen and (min-width: 576px) {
+  .SidePanel > .SidePanel-menu-wrapper {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .SidePanel > .SidePanel-menu-wrapper {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .SidePanel > .SidePanel-menu-wrapper {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .SidePanel > .SidePanel-menu-wrapper {
+    width: 30%;
+  }
 }
 
 .SidePanel > .SidePanel-menu-wrapper > button {
@@ -32,8 +56,25 @@
   padding: 1em;
 }
 
+.SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1em;
+  font-size: 1.75rem;
+}
+
+.SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-title > a > span {
+  margin-right: 10px;
+}
+
 .SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item {
-  margin-top: 3rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item > .SidePanel-menu-item-wrapper {
@@ -52,13 +93,28 @@
   cursor: pointer;
 }
 
+.SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item > .SidePanel-menu-item-wrapper > .SidePanel-menu-item-title {
+  font-size: 1.3rem;
+}
+
+.SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item > .SidePanel-menu-item-wrapper > .SidePanel-menu-item-title > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item > .SidePanel-menu-item-list > li {
   list-style-type: none;
   margin-top: 5px;
+  font-size: 0.8rem;
 }
 
 .SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item > .SidePanel-menu-item-list > li:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.SidePanel > .SidePanel-menu-wrapper > .SidePanel-menu > .SidePanel-menu-item > .SidePanel-menu-item-list > li > a {
+  text-decoration: none;
+  color: inherit;
 }
 /*# sourceMappingURL=SidePanel.css.map */
