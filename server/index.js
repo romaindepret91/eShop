@@ -9,6 +9,7 @@ import { testEndpoints } from "./tests/test-endpoints.js";
 
 const app = express();
 const port = process.env.NODE_ENV === "test" ? 0 : process.env.PORT || 3000; // Set Port 0 in test mode to allow parallel running of test suites
+app.use(express.static("public")); // Allow access to static files in public folder
 
 dotenv.config(); // Reads environment variables in env file
 config(); // Configuration set up

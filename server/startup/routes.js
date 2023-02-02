@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 // Routes
 import sessionsRoutes from "../routes/sessions.js";
 import usersRoutes from "../routes/users.js";
@@ -9,6 +10,8 @@ import productsRoutes from "../routes/products.js";
 import handleErrors from "../middlewares/handleErrors.js";
 
 export default function (app) {
+  // Allow CORS requests
+  app.use(cors({ origin: true, credentials: true }));
   //Middlewares
   app.use(morgan("dev"));
   app.use(express.json());

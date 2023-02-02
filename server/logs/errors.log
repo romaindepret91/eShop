@@ -2589,3 +2589,1469 @@
   ],
   timestamp: '2023-02-01T23:21:04.149Z'
 }
+{
+  error: SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10
+      at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)
+      at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28),
+  level: 'error',
+  message: 'uncaughtException: Unexpected token u in JSON at position 0\n' +
+    'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  stack: 'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:01:52 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 1198,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 28778496,
+      heapTotal: 31313920,
+      heapUsed: 29434464,
+      external: 22652413,
+      arrayBuffers: 18587469
+    }
+  },
+  os: { loadavg: [ 2.1474609375, 3.46044921875, 9.1015625 ], uptime: 1995 },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: 'JSON.parse',
+      line: null,
+      method: 'parse',
+      native: false
+    },
+    {
+      column: 23,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.filename [as getFilename]',
+      line: 13,
+      method: 'filename [as getFilename]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: null,
+      line: 34,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.destination [as getDestination]',
+      line: 10,
+      method: 'destination [as getDestination]',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: 'DiskStorage._handleFile',
+      line: 31,
+      method: '_handleFile',
+      native: false
+    },
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'multerFilter',
+      line: 37,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:01:52.085Z'
+}
+{
+  error: SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10
+      at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)
+      at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28),
+  level: 'error',
+  message: 'uncaughtException: Unexpected token u in JSON at position 0\n' +
+    'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  stack: 'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:05:35 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 1450,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 90329088,
+      heapTotal: 61722624,
+      heapUsed: 38646784,
+      external: 25865436,
+      arrayBuffers: 19001114
+    }
+  },
+  os: {
+    loadavg: [ 2.60546875, 2.8701171875, 7.54541015625 ],
+    uptime: 2218
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: 'JSON.parse',
+      line: null,
+      method: 'parse',
+      native: false
+    },
+    {
+      column: 23,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.filename [as getFilename]',
+      line: 13,
+      method: 'filename [as getFilename]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: null,
+      line: 34,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.destination [as getDestination]',
+      line: 10,
+      method: 'destination [as getDestination]',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: 'DiskStorage._handleFile',
+      line: 31,
+      method: '_handleFile',
+      native: false
+    },
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'multerFilter',
+      line: 37,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:05:35.039Z'
+}
+{
+  error: SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10
+      at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)
+      at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28),
+  level: 'error',
+  message: 'uncaughtException: Unexpected token u in JSON at position 0\n' +
+    'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  stack: 'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:06:09 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 1463,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 91348992,
+      heapTotal: 61722624,
+      heapUsed: 38978016,
+      external: 25815553,
+      arrayBuffers: 18959363
+    }
+  },
+  os: {
+    loadavg: [ 2.97998046875, 2.94287109375, 7.38330078125 ],
+    uptime: 2252
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: 'JSON.parse',
+      line: null,
+      method: 'parse',
+      native: false
+    },
+    {
+      column: 23,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.filename [as getFilename]',
+      line: 14,
+      method: 'filename [as getFilename]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: null,
+      line: 34,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.destination [as getDestination]',
+      line: 10,
+      method: 'destination [as getDestination]',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: 'DiskStorage._handleFile',
+      line: 31,
+      method: '_handleFile',
+      native: false
+    },
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'multerFilter',
+      line: 38,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:06:09.751Z'
+}
+{
+  error: SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10
+      at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)
+      at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28),
+  level: 'error',
+  message: 'uncaughtException: Unexpected token u in JSON at position 0\n' +
+    'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  stack: 'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:12:54 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 1526,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 91348992,
+      heapTotal: 61984768,
+      heapUsed: 39550160,
+      external: 25820325,
+      arrayBuffers: 18967555
+    }
+  },
+  os: {
+    loadavg: [ 2.81201171875, 2.5576171875, 5.49755859375 ],
+    uptime: 2657
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: 'JSON.parse',
+      line: null,
+      method: 'parse',
+      native: false
+    },
+    {
+      column: 23,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.filename [as getFilename]',
+      line: 14,
+      method: 'filename [as getFilename]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: null,
+      line: 34,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.destination [as getDestination]',
+      line: 10,
+      method: 'destination [as getDestination]',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: 'DiskStorage._handleFile',
+      line: 31,
+      method: '_handleFile',
+      native: false
+    },
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'multerFilter',
+      line: 38,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:12:54.898Z'
+}
+{
+  error: SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10
+      at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)
+      at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28),
+  level: 'error',
+  message: 'uncaughtException: Unexpected token u in JSON at position 0\n' +
+    'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  stack: 'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:14:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:38:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:13:40 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 1536,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 91873280,
+      heapTotal: 61722624,
+      heapUsed: 38950904,
+      external: 25839941,
+      arrayBuffers: 18986844
+    }
+  },
+  os: {
+    loadavg: [ 2.58203125, 2.5380859375, 5.33837890625 ],
+    uptime: 2703
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: 'JSON.parse',
+      line: null,
+      method: 'parse',
+      native: false
+    },
+    {
+      column: 23,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.filename [as getFilename]',
+      line: 14,
+      method: 'filename [as getFilename]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: null,
+      line: 34,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.destination [as getDestination]',
+      line: 10,
+      method: 'destination [as getDestination]',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: 'DiskStorage._handleFile',
+      line: 31,
+      method: '_handleFile',
+      native: false
+    },
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'multerFilter',
+      line: 38,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:13:40.962Z'
+}
+{
+  error: SyntaxError: Unexpected token u in JSON at position 0
+      at JSON.parse (<anonymous>)
+      at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10
+      at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)
+      at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)
+      at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17
+      at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)
+      at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)
+      at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)
+      at Multipart.emit (node:events:390:28),
+  level: 'error',
+  message: 'uncaughtException: Unexpected token u in JSON at position 0\n' +
+    'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  stack: 'SyntaxError: Unexpected token u in JSON at position 0\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at DiskStorage.filename [as getFilename] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:13:23)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:34:10\n' +
+    '    at DiskStorage.destination [as getDestination] (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:10:5)\n' +
+    '    at DiskStorage._handleFile (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js:31:8)\n' +
+    '    at /Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:137:17\n' +
+    '    at multerFilter (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js:37:7)\n' +
+    '    at wrappedFileFilter (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js:44:7)\n' +
+    '    at Multipart.<anonymous> (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js:107:7)\n' +
+    '    at Multipart.emit (node:events:390:28)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:14:18 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 1545,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 86990848,
+      heapTotal: 61984768,
+      heapUsed: 28344504,
+      external: 25814380,
+      arrayBuffers: 18401120
+    }
+  },
+  os: {
+    loadavg: [ 2.36181640625, 2.48388671875, 5.18896484375 ],
+    uptime: 2741
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: 'JSON.parse',
+      line: null,
+      method: 'parse',
+      native: false
+    },
+    {
+      column: 23,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.filename [as getFilename]',
+      line: 13,
+      method: 'filename [as getFilename]',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: null,
+      line: 34,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'DiskStorage.destination [as getDestination]',
+      line: 10,
+      method: 'destination [as getDestination]',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/storage/disk.js',
+      function: 'DiskStorage._handleFile',
+      line: 31,
+      method: '_handleFile',
+      native: false
+    },
+    {
+      column: 17,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 137,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/middlewares/uploadFiles.js',
+      function: 'multerFilter',
+      line: 37,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/index.js',
+      function: 'wrappedFileFilter',
+      line: 44,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/multer/lib/make-middleware.js',
+      function: null,
+      line: 107,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Multipart.emit',
+      line: 390,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:14:18.878Z'
+}
+{
+  error: ReferenceError: cors is not defined
+      at default (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/routes.js:13:7)
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:17:1
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: cors is not defined\n' +
+    'ReferenceError: cors is not defined\n' +
+    '    at default (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/routes.js:13:7)\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:17:1\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'ReferenceError: cors is not defined\n' +
+    '    at default (file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/routes.js:13:7)\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:17:1\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Thu Feb 02 2023 09:44:52 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 2159,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 89243648,
+      heapTotal: 59625472,
+      heapUsed: 30647800,
+      external: 23593283,
+      arrayBuffers: 18413044
+    }
+  },
+  os: {
+    loadavg: [ 3.14697265625, 3.1396484375, 3.298828125 ],
+    uptime: 4575
+  },
+  trace: [
+    {
+      column: 7,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/startup/routes.js',
+      function: 'default',
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T14:44:52.646Z'
+}
+{
+  error: ReferenceError: __dirname is not defined in ES module scope
+  This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    'ReferenceError: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'ReferenceError: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Thu Feb 02 2023 15:11:56 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6366,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 83939328,
+      heapTotal: 58052608,
+      heapUsed: 36926736,
+      external: 24625040,
+      arrayBuffers: 18993067
+    }
+  },
+  os: { loadavg: [ 3.21875, 3.646484375, 3.5185546875 ], uptime: 24199 },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: null,
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 34,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T20:11:56.310Z'
+}
+{
+  error: Error: listen EADDRINUSE: address already in use :::3000
+      at Server.setupListenHandle [as _listen2] (node:net:1334:16)
+      at listenInCluster (node:net:1382:12)
+      at Server.listen (node:net:1469:7)
+      at Function.listen (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/express/lib/application.js:635:24)
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:21:20
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12) {
+    code: 'EADDRINUSE',
+    errno: -48,
+    syscall: 'listen',
+    address: '::',
+    port: 3000
+  },
+  level: 'error',
+  message: 'uncaughtException: listen EADDRINUSE: address already in use :::3000\n' +
+    'Error: listen EADDRINUSE: address already in use :::3000\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1334:16)\n' +
+    '    at listenInCluster (node:net:1382:12)\n' +
+    '    at Server.listen (node:net:1469:7)\n' +
+    '    at Function.listen (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/express/lib/application.js:635:24)\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:21:20\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'Error: listen EADDRINUSE: address already in use :::3000\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1334:16)\n' +
+    '    at listenInCluster (node:net:1382:12)\n' +
+    '    at Server.listen (node:net:1469:7)\n' +
+    '    at Function.listen (/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/express/lib/application.js:635:24)\n' +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:21:20\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Thu Feb 02 2023 15:13:35 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6448,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 82694144,
+      heapTotal: 58576896,
+      heapUsed: 37689800,
+      external: 24646293,
+      arrayBuffers: 18993235
+    }
+  },
+  os: {
+    loadavg: [ 4.103515625, 3.8212890625, 3.59521484375 ],
+    uptime: 24298
+  },
+  trace: [
+    {
+      column: 16,
+      file: 'node:net',
+      function: 'Server.setupListenHandle [as _listen2]',
+      line: 1334,
+      method: 'setupListenHandle [as _listen2]',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:net',
+      function: 'listenInCluster',
+      line: 1382,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'node:net',
+      function: 'Server.listen',
+      line: 1469,
+      method: 'listen',
+      native: false
+    },
+    {
+      column: 24,
+      file: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/node_modules/express/lib/application.js',
+      function: 'Function.listen',
+      line: 635,
+      method: 'listen',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 21,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T20:13:35.412Z'
+}
+{
+  error: ReferenceError: __dirname is not defined in ES module scope
+  This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    'ReferenceError: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'ReferenceError: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Thu Feb 02 2023 15:15:01 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6473,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 80347136,
+      heapTotal: 60149760,
+      heapUsed: 33771408,
+      external: 25683994,
+      arrayBuffers: 18737562
+    }
+  },
+  os: {
+    loadavg: [ 4.48046875, 3.94091796875, 3.6552734375 ],
+    uptime: 24384
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: null,
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 34,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T20:15:01.238Z'
+}
+{
+  error: ReferenceError: __dirname is not defined in ES module scope
+  This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+      at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34
+      at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+      at async Promise.all (index 0)
+      at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+      at async loadESM (node:internal/process/esm_loader:88:5)
+      at async handleMainPromise (node:internal/modules/run_main:65:12),
+  level: 'error',
+  message: 'uncaughtException: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    'ReferenceError: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  stack: 'ReferenceError: __dirname is not defined in ES module scope\n' +
+    `This file is being treated as an ES module because it has a '.js' file extension and '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n` +
+    '    at file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js:13:34\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)\n' +
+    '    at async loadESM (node:internal/process/esm_loader:88:5)\n' +
+    '    at async handleMainPromise (node:internal/modules/run_main:65:12)',
+  exception: true,
+  date: 'Thu Feb 02 2023 15:16:42 GMT-0500 (heure normale de l’Est)',
+  process: {
+    pid: 6494,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server',
+    execPath: '/usr/local/bin/node',
+    version: 'v16.13.1',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/romaindepret/Documents/Documents/Cours et Elearning/Udemy/Développement Web/MERN e-commerce project/app/server/index.js'
+    ],
+    memoryUsage: {
+      rss: 82313216,
+      heapTotal: 59887616,
+      heapUsed: 34120104,
+      external: 25762450,
+      arrayBuffers: 18789731
+    }
+  },
+  os: {
+    loadavg: [ 3.916015625, 3.8583984375, 3.6513671875 ],
+    uptime: 24485
+  },
+  trace: [
+    {
+      column: null,
+      file: null,
+      function: null,
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 34,
+      file: 'file:///Users/romaindepret/Documents/Documents/Cours%20et%20Elearning/Udemy/De%CC%81veloppement%20Web/MERN%20e-commerce%20project/app/server/index.js',
+      function: null,
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'node:internal/modules/esm/module_job',
+      function: 'ModuleJob.run',
+      line: 185,
+      method: 'run',
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'async Promise.all',
+      line: null,
+      method: 'all',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/esm/loader',
+      function: 'async ESMLoader.import',
+      line: 281,
+      method: 'import',
+      native: false
+    },
+    {
+      column: 5,
+      file: 'node:internal/process/esm_loader',
+      function: 'async loadESM',
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'async handleMainPromise',
+      line: 65,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-02-02T20:16:42.221Z'
+}

@@ -1,39 +1,19 @@
-import { Container, Row, Col, Image, Card, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { useContext } from "react";
+import { ProductsContext } from "../../context/ProductsContext";
+import ProductCard from "./productCard/ProductCard";
 
 export default function ProductCatalog() {
+  const { filteredProducts } = useContext(ProductsContext);
+
   return (
     <Container>
-      <Row>
-        <Col className="mb-3">
-          <Card>
-            <Image src="image1.jpg" alt="image1" fluid />
-            <Card.Body>
-              <Card.Title>image1</Card.Title>
-              <Card.Text>image1</Card.Text>
-              <Button variant="primary">View </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col className="mb-3">
-          <Card>
-            <Image src="image2.jpg" alt="image2" fluid />
-            <Card.Body>
-              <Card.Title>image2</Card.Title>
-              <Card.Text>image2</Card.Text>
-              <Button variant="primary">View </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col className="mb-3">
-          <Card>
-            <Image src="image3.jpg" alt="image3" fluid />
-            <Card.Body>
-              <Card.Title>image3</Card.Title>
-              <Card.Text>image3</Card.Text>
-              <Button variant="primary">View Product</Button>
-            </Card.Body>
-          </Card>
-        </Col>
+      <Row xs={1} md={2} lg={3} xl={4}>
+        {filteredProducts.map((product) => (
+          <Col key={product._id} className="mb-3">
+            <ProductCard product={product} />
+          </Col>
+        ))}
       </Row>
     </Container>
   );

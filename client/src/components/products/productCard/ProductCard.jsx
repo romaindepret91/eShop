@@ -1,13 +1,19 @@
-import { Image, Card, Button } from "react-bootstrap";
+import { Image, Card } from "react-bootstrap";
+import { serverURL } from "../../../dbRequests/serverURL";
 
-export default function ProductCard() {
+export default function ProductCard({ product }) {
+  const imageURL = `${serverURL}${product.images[0]["image1"].replace(
+    "public",
+    ""
+  )}`;
+
   return (
     <Card>
-      <Image src="image1.jpg" alt="image1" fluid />
+      <Image src={imageURL} alt="image1" fluid />
       <Card.Body>
-        <Card.Title>image1</Card.Title>
-        <Card.Text>image1</Card.Text>
-        <Button variant="primary">View </Button>
+        <Card.Title>{product.name}</Card.Title>
+        <Card.Text>{product.brand}</Card.Text>
+        <Card.Text>${product.price}</Card.Text>
       </Card.Body>
     </Card>
   );
