@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
-import ProductCard from "./productCard/ProductCard";
+import ProductCard from "./ProductCard";
 
 export default function ProductCatalog() {
   const { filteredProducts } = useContext(ProductsContext);

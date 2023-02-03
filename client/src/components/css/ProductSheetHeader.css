@@ -1,0 +1,9 @@
+.ProductSheetHeader .card {
+  border: none;
+}
+
+.ProductSheetHeader .card > .card-body {
+  padding-right: 0;
+  padding-left: 0;
+}
+/*# sourceMappingURL=ProductSheetHeader.css.map */

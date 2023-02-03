@@ -1,14 +1,9 @@
 import { Image, Card } from "react-bootstrap";
-import { serverURL } from "../../../dbRequests/serverURL";
 import { useNavigate } from "react-router-dom";
 import "./ProductCard.scss";
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
-  const imageURL = `${serverURL}${product.images[0]["image1"].replace(
-    "public",
-    ""
-  )}`;
 
   return (
     <Card
@@ -19,7 +14,7 @@ export default function ProductCard({ product }) {
         });
       }}
     >
-      <Image src={imageURL} alt="image1" fluid />
+      <Image src={product.images[0]["image1"]} alt="image1" fluid />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.brand}</Card.Text>

@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
-import { getAllProducts } from "../dbRequests/products";
 import slugify from "slugify";
+import { getAllProducts } from "../dbRequests/products";
+import { serverURL } from "../dbRequests/serverURL";
 
 export const ProductsContext = createContext({
   filteredProducts: [],
@@ -16,6 +17,14 @@ const ProductsContextProvider = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       getAllProducts().then((products) => {
+        products.data.forEach((product) => {
+          product.images.forEach((image, index) => {
+            image[`image${index + 1}`] = `${serverURL}${image[
+              `image${index + 1}`
+            ].replace("public", "")}`;
+          });
+        });
+
         setProducts(products.data);
         setIsLoaded(true);
       });

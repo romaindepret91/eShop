@@ -1,7 +1,27 @@
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import ProductSheetImages from "./ProductSheetImages";
+import ProductSheetHeader from "./ProductSheetHeader";
+import ProductSheetActions from "./ProductSheetActions";
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function ProductSheet() {
   const { state } = useLocation();
-  console.log(state.product);
-  return <div>Product Sheet</div>;
+  const [product, setProduct] = useState(state.product);
+  const [productImages, setProductImages] = useState(product.images);
+
+  return (
+    <Container className="ProductSheet">
+      {" "}
+      <Row>
+        <Col xs={12} md={6}>
+          <ProductSheetImages productImages={productImages} />
+        </Col>
+        <Col xs={12} md={6} className="d-flex flex-column ">
+          <ProductSheetHeader product={product} />
+          <ProductSheetActions />
+        </Col>
+      </Row>
+    </Container>
+  );
 }

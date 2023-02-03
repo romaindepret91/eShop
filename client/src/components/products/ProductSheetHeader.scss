@@ -1,0 +1,10 @@
+.ProductSheetHeader {
+  & .card {
+    border: none;
+
+    & > .card-body {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
