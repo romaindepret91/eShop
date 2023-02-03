@@ -21,4 +21,24 @@
   display: flex;
   width: 100%;
 }
+
+.Header_headerMenu .collapse-content {
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  z-index: 10;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 991px) {
+  .Header_headerMenu .collapse-content {
+    position: inherit;
+    background-color: inherit;
+    padding: 0;
+  }
+}
+
+.Header_headerMenu .collapse-content a {
+  white-space: nowrap;
+}
 /*# sourceMappingURL=HeaderMenu.css.map */
