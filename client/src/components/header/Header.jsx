@@ -8,7 +8,7 @@ export const Header = memo(() => {
   const [openSidePanel, setOpenSidePanel] = useState(false);
   const { sizingGroup, setSizingGroup } = useContext(SizingGroupContext);
   return (
-    <header className="Header">
+    <header className="Header bg-light">
       <HeaderTop />
       <HeaderMenu
         setOpenSidePanel={setOpenSidePanel}

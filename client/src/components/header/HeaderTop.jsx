@@ -2,6 +2,7 @@ import { Navbar, Container } from "react-bootstrap";
 import HeaderLogo from "./HeaderLogo";
 import SearchBar from "../search/SearchBar";
 import HeaderButtonGroup from "./HeaderButtonGroup";
+import "./HeaderTop.scss";
 
 export default function HeaderTop() {
   return (
