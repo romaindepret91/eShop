@@ -3,6 +3,7 @@ import HeaderTop from "./HeaderTop";
 import SidePanel from "../sidePanel/SidePanel";
 import { useState, useContext, memo } from "react";
 import { SizingGroupContext } from "../../context/SizingGroupContext";
+import "./Header.scss";
 
 export const Header = memo(() => {
   const [openSidePanel, setOpenSidePanel] = useState(false);

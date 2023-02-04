@@ -1,0 +1,16 @@
+.breadcrumb {
+  margin-top: 0.5rem;
+  & .breadcrumb-item {
+    display: flex;
+    &::before {
+      font-size: 0.7rem;
+      color: grey;
+    }
+    & > a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 0.7rem;
+      color: grey;
+    }
+  }
+}
