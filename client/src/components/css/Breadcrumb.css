@@ -1,0 +1,22 @@
+.breadcrumb {
+  margin-top: 0.5rem;
+}
+
+.breadcrumb .breadcrumb-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumb .breadcrumb-item::before {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+.breadcrumb .breadcrumb-item > a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.7rem;
+  color: grey;
+}
+/*# sourceMappingURL=Breadcrumb.css.map */

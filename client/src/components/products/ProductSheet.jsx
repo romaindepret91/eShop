@@ -9,7 +9,7 @@ export default function ProductSheet() {
   const { state } = useLocation();
   const [product, setProduct] = useState(state.product);
   const [productImages, setProductImages] = useState(product.images);
-  console.log(product);
+
   return (
     <Container className="ProductSheet">
       {" "}
@@ -19,7 +19,7 @@ export default function ProductSheet() {
         </Col>
         <Col xs={12} md={6} className="d-flex flex-column ">
           <ProductSheetHeader product={product} />
-          <ProductSheetActions />
+          <ProductSheetActions product={product} />
         </Col>
       </Row>
     </Container>

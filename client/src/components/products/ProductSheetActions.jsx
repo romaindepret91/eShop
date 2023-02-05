@@ -6,18 +6,15 @@ export default function ProductSheetActions({ product }) {
     <Container className="ProductSheetActions ">
       <Row className="ProductSheetActions-size">
         <Col xs={12}>Select size:</Col>
-        <Col>
-          <Button variant="light">10 Oz</Button>
-        </Col>
-        <Col>
-          <Button variant="light">12 Oz</Button>
-        </Col>
-        <Col>
-          <Button variant="light">14 Oz</Button>
-        </Col>
-        <Col>
-          <Button variant="light">16 Oz</Button>
-        </Col>{" "}
+        {Object.keys(product.stock).map((size, quantity) => {
+          return (
+            <Col>
+              <Button variant="light" disabled={quantity < 1}>
+                {!size.includes("oz") ? size.toUpperCase() : size}
+              </Button>
+            </Col>
+          );
+        })}
       </Row>
       <Container className="ProductSheetActions-buy ">
         <Button size="lg" id="buy-btn">

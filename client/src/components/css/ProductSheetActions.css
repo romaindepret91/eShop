@@ -29,4 +29,8 @@
   padding-left: 5px;
   padding-right: 5px;
 }
+
+.ProductSheetActions > .ProductSheetActions-size > .col > button:disabled {
+  opacity: 0.3;
+}
 /*# sourceMappingURL=ProductSheetActions.css.map */
