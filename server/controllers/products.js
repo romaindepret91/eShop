@@ -19,6 +19,12 @@ import fs from "fs";
  * @returns errors ? response with relevant error message : created product
  */
 export const createProduct = async (req, res) => {
+  if (!req.body.stock) return res.status(400).send(`"stock" required`);
+  req.body.stock = JSON.parse(req.body.stock);
+  if (req.body.hasSize && typeof req.body.stock !== "object")
+    return res.status(400).send(`"stock" should be of object type`);
+  if (req.body.hasSize) req.body.hasSize = true;
+
   // Data validation. Remove saved files if error
   const validation = validateProduct(req.body);
   if (validation.error) {
@@ -47,6 +53,7 @@ export const createProduct = async (req, res) => {
       "category",
       "sizingGroup",
       "stock",
+      "hasSize",
     ])
   ).save();
 

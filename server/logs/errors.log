@@ -4145,3 +4145,53 @@
   level: 'error',
   timestamp: '2023-02-04T16:05:30.288Z'
 }
+{
+  message: 'Method no longer accepts array arguments: try',
+  level: 'error',
+  timestamp: '2023-02-05T01:41:56.304Z'
+}
+{
+  message: 'Method no longer accepts array arguments: try',
+  level: 'error',
+  timestamp: '2023-02-05T01:42:14.862Z'
+}
+{
+  message: 'Joi.number(...).min(...).defaults is not a function',
+  level: 'error',
+  timestamp: '2023-02-05T16:03:35.044Z'
+}
+{
+  message: 'Product validation failed: brand: Path `brand` is required.',
+  level: 'error',
+  timestamp: '2023-02-05T16:17:56.689Z'
+}
+{
+  message: 'Unexpected token x in JSON at position 1',
+  level: 'error',
+  timestamp: '2023-02-05T18:43:24.849Z'
+}
+{
+  message: 'Unexpected token x in JSON at position 1',
+  level: 'error',
+  timestamp: '2023-02-05T18:48:18.134Z'
+}
+{
+  message: "Unexpected token ' in JSON at position 1",
+  level: 'error',
+  timestamp: '2023-02-05T18:48:59.952Z'
+}
+{
+  message: 'Unexpected token , in JSON at position 22',
+  level: 'error',
+  timestamp: '2023-02-05T18:59:34.865Z'
+}
+{
+  message: 'Product validation failed: hasSize: Path `hasSize` is required.',
+  level: 'error',
+  timestamp: '2023-02-05T19:06:41.817Z'
+}
+{
+  message: 'Product validation failed: hasSize: Path `hasSize` is required.',
+  level: 'error',
+  timestamp: '2023-02-05T19:07:07.222Z'
+}

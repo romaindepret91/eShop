@@ -9,7 +9,7 @@ export default function ProductSheet() {
   const { state } = useLocation();
   const [product, setProduct] = useState(state.product);
   const [productImages, setProductImages] = useState(product.images);
-
+  console.log(product);
   return (
     <Container className="ProductSheet">
       {" "}

@@ -12,9 +12,31 @@ export function validateProduct(product) {
     brand: Joi.string().min(2).max(32).required(),
     description: Joi.string().min(2).max(2000).required(),
     price: Joi.number().min(0.01).required(),
+    hasSize: Joi.boolean(),
     category: Joi.objectId().required(),
     sizingGroup: Joi.string().valid("women", "men", "kids").required(),
-    stock: Joi.number().min(1).required(),
+    stock: Joi.alternatives().try(
+      Joi.object()
+        .keys({
+          xs: Joi.number().min(0).required(),
+          s: Joi.number().min(0).required(),
+          m: Joi.number().min(0).required(),
+          l: Joi.number().min(0).required(),
+          xl: Joi.number().min(0).required(),
+          xxl: Joi.number().min(0).required(),
+        })
+        .required(),
+      Joi.object()
+        .keys({
+          "8oz": Joi.number().min(0).required(),
+          "10oz": Joi.number().min(0).required(),
+          "12oz": Joi.number().min(0).required(),
+          "14oz": Joi.number().min(0).required(),
+          "16oz": Joi.number().min(0).required(),
+        })
+        .required(),
+      Joi.number().min(0).required()
+    ),
     sold: Joi.number().min(0),
     shipping: Joi.boolean(),
   });
