@@ -13,12 +13,13 @@
     }
   }
   & > .ProductSheetActions-size {
-    & > .col {
+    & > .col-2 {
       margin-top: 1rem;
-      padding-left: 5px;
+      padding-left: 0;
       padding-right: 5px;
 
       & > button {
+        width: 100%;
         &:disabled {
           opacity: 0.3;
         }

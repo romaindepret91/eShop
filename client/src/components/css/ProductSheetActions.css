@@ -24,13 +24,17 @@
   margin-top: 2rem;
 }
 
-.ProductSheetActions > .ProductSheetActions-size > .col {
+.ProductSheetActions > .ProductSheetActions-size > .col-2 {
   margin-top: 1rem;
-  padding-left: 5px;
+  padding-left: 0;
   padding-right: 5px;
 }
 
-.ProductSheetActions > .ProductSheetActions-size > .col > button:disabled {
+.ProductSheetActions > .ProductSheetActions-size > .col-2 > button {
+  width: 100%;
+}
+
+.ProductSheetActions > .ProductSheetActions-size > .col-2 > button:disabled {
   opacity: 0.3;
 }
 /*# sourceMappingURL=ProductSheetActions.css.map */
