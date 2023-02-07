@@ -16,14 +16,21 @@
     & > .col-2 {
       margin-top: 1rem;
       padding-left: 0;
-      padding-right: 5px;
+      padding-right: 0;
+      width: 4rem;
+      margin-right: 15px;
 
       & > button {
         width: 100%;
+
         &:disabled {
           opacity: 0.3;
         }
       }
+    }
+
+    & > .col-12 > span {
+      margin-left: 10px;
     }
   }
 }

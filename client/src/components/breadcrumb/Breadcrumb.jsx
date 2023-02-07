@@ -11,7 +11,7 @@ export default function CatalogBreadcrumb() {
       <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
       {arrayPath.map((item, index) => {
         path += `/${item}`;
-        if (item == "all") {
+        if (item === "all") {
           return;
         }
         if (item === "products") {

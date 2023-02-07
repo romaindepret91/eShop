@@ -17,7 +17,7 @@ export default function ProductSheet() {
         <Col xs={12} md={6}>
           <ProductSheetImages productImages={productImages} />
         </Col>
-        <Col xs={12} md={6} className="d-flex flex-column ">
+        <Col xs={12} sm={10} md={6} lg={5} className="d-flex flex-column ">
           <ProductSheetHeader product={product} />
           <ProductSheetActions product={product} />
         </Col>
