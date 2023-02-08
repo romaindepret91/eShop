@@ -10,8 +10,8 @@ export default function ProductSheet({
   setOpenCartSidePanel,
 }) {
   const { state } = useLocation();
-  const [product, setProduct] = useState(state.product);
-  const [productImages, setProductImages] = useState(product.images);
+  const [product] = useState(state.product);
+  const [productImages] = useState(product.images);
 
   return (
     <Container className="ProductSheet">
