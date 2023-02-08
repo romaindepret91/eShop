@@ -5,7 +5,10 @@ import ProductSheetHeader from "./ProductSheetHeader";
 import ProductSheetActions from "./ProductSheetActions";
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function ProductSheet() {
+export default function ProductSheet({
+  openCartSidePanel,
+  setOpenCartSidePanel,
+}) {
   const { state } = useLocation();
   const [product, setProduct] = useState(state.product);
   const [productImages, setProductImages] = useState(product.images);
@@ -19,7 +22,11 @@ export default function ProductSheet() {
         </Col>
         <Col xs={12} sm={10} md={6} lg={5} className="d-flex flex-column ">
           <ProductSheetHeader product={product} />
-          <ProductSheetActions product={product} />
+          <ProductSheetActions
+            product={product}
+            openCartSidePanel={openCartSidePanel}
+            setOpenCartSidePanel={setOpenCartSidePanel}
+          />
         </Col>
       </Row>
     </Container>

@@ -1,0 +1,80 @@
+.CartSidePanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: flex-end;
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  & > .CartSidePanel-card-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    @media only screen and (min-width: 576px) {
+      width: 70%;
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 45%;
+    }
+
+    @media only screen and (min-width: 992px) {
+      width: 40%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      width: 30%;
+    }
+
+    & > button {
+      float: right;
+    }
+
+    & > .CartSidePanel-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      & > .card {
+        border: none;
+        background-color: inherit;
+        & > .card-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 1.5rem;
+          font-weight: 600;
+          border: none;
+          background-color: inherit;
+        }
+
+        & > .card-body {
+          display: flex;
+
+          & > .card-img {
+            width: 40%;
+          }
+
+          & .card-text {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      & > button {
+        width: 80%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

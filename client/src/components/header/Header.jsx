@@ -1,11 +1,12 @@
 import HeaderMenu from "./HeaderMenu";
 import HeaderTop from "./HeaderTop";
 import SidePanel from "../sidePanel/SidePanel";
+import CartSidePanel from "../cart/CartSidePanel";
 import { useState, useContext, memo } from "react";
 import { SizingGroupContext } from "../../context/SizingGroupContext";
 import "./Header.scss";
 
-export const Header = memo(() => {
+export const Header = memo(({ openCartSidePanel, setOpenCartSidePanel }) => {
   const [openSidePanel, setOpenSidePanel] = useState(false);
   const { sizingGroup, setSizingGroup } = useContext(SizingGroupContext);
   return (
@@ -20,6 +21,10 @@ export const Header = memo(() => {
         openSidePanel={openSidePanel}
         setOpenSidePanel={setOpenSidePanel}
         sizingGroup={sizingGroup}
+      />
+      <CartSidePanel
+        openCartSidePanel={openCartSidePanel}
+        setOpenCartSidePanel={setOpenCartSidePanel}
       />
     </header>
   );

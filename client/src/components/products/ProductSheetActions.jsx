@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Container, Button, Col, Row } from "react-bootstrap";
+import { CartContext } from "../../context/CartContext";
 import "./ProductSheetActions.scss";
 
-export default function ProductSheetActions({ product }) {
+export default function ProductSheetActions({
+  product,
+  openCartSidePanel,
+  setOpenCartSidePanel,
+}) {
   const [selectedSize, setSelectedSize] = useState("");
+  const { cart, setCart } = useContext(CartContext);
   const handleSelectSize = (e) => {
     setSelectedSize(e.currentTarget.innerText);
     const eltClass = e.currentTarget.className;
@@ -15,6 +21,16 @@ export default function ProductSheetActions({ product }) {
         ? element.classList.add("active")
         : element.classList.remove("active");
     });
+  };
+
+  const handleAddToCart = () => {
+    product.selectedSize = selectedSize;
+    cart.push(product);
+    setCart(cart);
+    setOpenCartSidePanel(!openCartSidePanel);
+    setTimeout(() => {
+      setOpenCartSidePanel(false);
+    }, 6000);
   };
   return (
     <Container className="ProductSheetActions ">
@@ -38,7 +54,13 @@ export default function ProductSheetActions({ product }) {
         })}
       </Row>
       <Container className="ProductSheetActions-buy ">
-        <Button size="lg" id="buy-btn">
+        <Button
+          size="lg"
+          id="buy-btn"
+          onClick={() => {
+            handleAddToCart();
+          }}
+        >
           Add to cart
         </Button>
       </Container>
