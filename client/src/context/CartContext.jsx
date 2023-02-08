@@ -6,7 +6,9 @@ export const CartContext = createContext({
 });
 
 const CartContextProvider = (props) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
 
   return (
     <CartContext.Provider value={{ cart, setCart }}>

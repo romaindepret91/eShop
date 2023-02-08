@@ -27,6 +27,7 @@ export default function ProductSheetActions({
     product.selectedSize = selectedSize;
     cart.push(product);
     setCart(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
     setOpenCartSidePanel(!openCartSidePanel);
     setTimeout(() => {
       setOpenCartSidePanel(false);
