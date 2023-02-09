@@ -2,14 +2,15 @@
   @media only screen and (min-width: 1024px) {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: [row1-start] 100px [row1-end];
+    gap: 2rem;
+    padding-top: 2rem;
 
     & > .Cart-header {
       grid-column: 1/8;
-      background-color: aqua;
     }
     & > .Cart-list {
       grid-column: 1/8;
+      grid-row-start: 2;
 
       & > .CartItem {
         border: none;
@@ -22,7 +23,7 @@
     & > .Cart-summary {
       grid-column: 8/13;
       grid-row-start: 1;
-      background-color: antiquewhite;
+      grid-row-end: 3;
     }
   }
 }

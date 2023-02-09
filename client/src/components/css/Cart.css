@@ -4,19 +4,20 @@
     display: grid;
     -ms-grid-columns: (minmax(0, 1fr))[12];
         grid-template-columns: repeat(12, minmax(0, 1fr));
-    -ms-grid-rows: [row1-start] 100px [row1-end];
-        grid-template-rows: [row1-start] 100px [row1-end];
+    gap: 2rem;
+    padding-top: 2rem;
   }
   .Cart > .Cart-header {
     -ms-grid-column: 1;
     -ms-grid-column-span: 7;
     grid-column: 1/8;
-    background-color: aqua;
   }
   .Cart > .Cart-list {
     -ms-grid-column: 1;
     -ms-grid-column-span: 7;
     grid-column: 1/8;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
   }
   .Cart > .Cart-list > .CartItem {
     border: none;
@@ -31,7 +32,7 @@
     grid-column: 8/13;
     -ms-grid-row: 1;
         grid-row-start: 1;
-    background-color: antiquewhite;
+    grid-row-end: 3;
   }
 }
 /*# sourceMappingURL=Cart.css.map */

@@ -12,4 +12,13 @@
       justify-content: space-between;
     }
   }
+
+  & + .Cart-actions {
+    display: flex;
+    flex-direction: column;
+
+    & > button {
+      margin-top: 2rem;
+    }
+  }
 }

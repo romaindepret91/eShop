@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
 import { ProductsContext } from "../../context/ProductsContext";
@@ -13,6 +13,14 @@ export default function Cart() {
   const itemsNumber = cart.reduce((a, i) => {
     return a + i.quantityInCart;
   }, 0);
+
+  useEffect(() => {
+    let newTotal = cart.reduce((a, i) => {
+      return a + i.price * i.quantityInCart;
+    }, 0);
+    setCartTotalPrice(newTotal);
+    localStorage.setItem("cartTotalPrice", newTotal);
+  }, [cart]);
 
   return (
     <Container className="Cart">

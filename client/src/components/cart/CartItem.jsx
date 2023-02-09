@@ -4,16 +4,12 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./CartItem.scss";
 import { useState, useEffect } from "react";
 
-export default function CartItem({
-  product,
-  products,
-  cart,
-  setCart,
-  setCartTotalPrice,
-}) {
+export default function CartItem({ product, products, cart, setCart }) {
   const [quantityAvailable, setQuantityAvailable] = useState(1);
-  const [quantitySelected, setQuantitySelected] = useState(1);
-
+  const [quantitySelected, setQuantitySelected] = useState(
+    product.quantityInCart
+  );
+  console.log(quantitySelected);
   const handleChangeQuantitySelected = (e) => {
     setQuantitySelected(e.currentTarget.value);
     const cartUpdated = cart.map((p) => {
@@ -34,6 +30,10 @@ export default function CartItem({
     }
   }, [products]);
 
+  useEffect(() => {
+    setQuantitySelected(product.quantityInCart);
+  }, [cart]);
+
   const handleDeleteItem = (e) => {
     const id = e.currentTarget.parentElement.parentElement.dataset.productId;
     const size = e.currentTarget.parentElement.parentElement
@@ -47,14 +47,6 @@ export default function CartItem({
     setCart(cartUpdated);
     localStorage.setItem("cart", JSON.stringify(cartUpdated));
   };
-
-  useEffect(() => {
-    let newTotal = cart.reduce((a, i) => {
-      return a + i.price * i.quantityInCart;
-    }, 0);
-    setCartTotalPrice(newTotal);
-    localStorage.setItem("cartTotalPrice", newTotal);
-  }, [cart]);
 
   useEffect(() => {
     setQuantitySelected(

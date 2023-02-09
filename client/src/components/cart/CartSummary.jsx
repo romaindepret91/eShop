@@ -1,4 +1,4 @@
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
 import "./CartSummary.scss";
 
 export default function CartSummary({ cart, cartTotalPrice }) {
@@ -26,6 +26,9 @@ export default function CartSummary({ cart, cartTotalPrice }) {
           </Card.Text>
         </Card.Footer>
       </Card>
+      <div className="Cart-actions">
+        <Button>Continue to checkout</Button>
+      </div>
     </Container>
   );
 }
