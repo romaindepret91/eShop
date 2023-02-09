@@ -1,0 +1,15 @@
+.CartSummary {
+  & > .card-body {
+    & > .card-text {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  & > .card-footer {
+    & > .card-text {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

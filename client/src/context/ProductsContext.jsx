@@ -6,13 +6,15 @@ import { serverURL } from "../dbRequests/serverURL";
 export const ProductsContext = createContext({
   filteredProducts: [],
   setFilteredProducts: () => {},
+  products: [],
+  setProducts: () => {},
 });
 
 const ProductsContextProvider = (props) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [url, setUrl] = useState(window.location.pathname);
+  const [url] = useState(window.location.pathname);
 
   useEffect(() => {
     if (!isLoaded) {
@@ -64,7 +66,7 @@ const ProductsContextProvider = (props) => {
 
   return (
     <ProductsContext.Provider
-      value={{ filteredProducts, setFilteredProducts, url }}
+      value={{ filteredProducts, setFilteredProducts, products, setProducts }}
     >
       {props.children}
     </ProductsContext.Provider>

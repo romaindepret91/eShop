@@ -7,6 +7,7 @@ import CartContextProvider from "./context/CartContext";
 import Homepage from "./components/homepage/Homepage";
 import ProductCatalog from "./components/products/ProductCatalog";
 import ProductSheet from "./components/products/ProductSheet";
+import Cart from "./components/cart/Cart";
 
 export default function App() {
   const [openCartSidePanel, setOpenCartSidePanel] = useState(false);
@@ -39,6 +40,7 @@ export default function App() {
                   />
                 }
               />
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </CartContextProvider>
         </SizingGroupContextProvider>

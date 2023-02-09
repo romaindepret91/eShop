@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Card, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -9,9 +10,10 @@ export default function CartSidePanel({
   openCartSidePanel,
   setOpenCartSidePanel,
 }) {
+  const navigate = useNavigate();
   const { cart } = useContext(CartContext);
   const product = cart[cart.length - 1];
-  console.log(cart);
+
   return (
     <div className={`CartSidePanel ${openCartSidePanel ? "show" : ""}`}>
       {product && (
@@ -41,7 +43,15 @@ export default function CartSidePanel({
                 </div>
               </Card.Body>
             </Card>
-            <Button variant="primary">View Cart</Button>{" "}
+            <Button
+              variant="primary"
+              onClick={() => {
+                setOpenCartSidePanel(false);
+                navigate("/cart");
+              }}
+            >
+              View Cart
+            </Button>{" "}
             <Button variant="light" onClick={() => setOpenCartSidePanel(false)}>
               Continue shopping
             </Button>{" "}

@@ -9,7 +9,8 @@ export default function ProductSheetActions({
   setOpenCartSidePanel,
 }) {
   const [selectedSize, setSelectedSize] = useState("");
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, setCart, cartTotalPrice, setCartTotalPrice } =
+    useContext(CartContext);
   const handleSelectSize = (e) => {
     setSelectedSize(e.currentTarget.innerText);
     const eltClass = e.currentTarget.className;
@@ -24,10 +25,22 @@ export default function ProductSheetActions({
   };
 
   const handleAddToCart = () => {
-    product.selectedSize = selectedSize;
-    cart.push(product);
+    if (
+      cart.some((p) => {
+        return p._id === product._id && p.selectedSize === selectedSize;
+      })
+    ) {
+      const i = cart.indexOf(product);
+      cart[i].quantityInCart += 1;
+    } else {
+      product.quantityInCart = 1;
+      product.selectedSize = selectedSize;
+      cart.push(product);
+    }
     setCart(cart);
+    setCartTotalPrice(cartTotalPrice + product.price);
     localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartTotalPrice", cartTotalPrice + product.price);
     setOpenCartSidePanel(!openCartSidePanel);
     setTimeout(() => {
       setOpenCartSidePanel(false);
