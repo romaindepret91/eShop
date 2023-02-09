@@ -34,6 +34,20 @@ export default function CartItem({
     }
   }, [products]);
 
+  const handleDeleteItem = (e) => {
+    const id = e.currentTarget.parentElement.parentElement.dataset.productId;
+    const size = e.currentTarget.parentElement.parentElement
+      .querySelector(".selectedSize")
+      .innerText.split(" ")
+      .at(-1);
+
+    const cartUpdated = cart.filter((p) => {
+      return p._id !== id || p.selectedSize !== size;
+    });
+    setCart(cartUpdated);
+    localStorage.setItem("cart", JSON.stringify(cartUpdated));
+  };
+
   useEffect(() => {
     let newTotal = cart.reduce((a, i) => {
       return a + i.price * i.quantityInCart;
@@ -49,7 +63,7 @@ export default function CartItem({
   }, []);
 
   return (
-    <Card className="CartItem">
+    <Card className="CartItem" data-product-id={product._id}>
       <Card.Body>
         <Card.Img src={product.images[0]["image1"]} />
         <div>
@@ -58,7 +72,10 @@ export default function CartItem({
             <span style={{ fontWeight: 600 }}>$ {product.price}</span>
           </Card.Title>
           <Card.Text> {product.brand}</Card.Text>
-          <Card.Text style={{ fontWeight: 300, fontSize: ".8rem" }}>
+          <Card.Text
+            className="selectedSize"
+            style={{ fontWeight: 300, fontSize: ".8rem" }}
+          >
             Selected size: {product.selectedSize}
           </Card.Text>
         </div>
@@ -85,8 +102,7 @@ export default function CartItem({
             </Form.Select>
           )}
         </Card.Text>
-
-        <FontAwesomeIcon icon={faTrash} />
+        <FontAwesomeIcon icon={faTrash} onClick={handleDeleteItem} />
       </Card.Footer>
     </Card>
   );

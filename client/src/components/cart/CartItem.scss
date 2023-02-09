@@ -31,6 +31,10 @@
     border: none;
     background-color: inherit;
 
+    & > svg:hover {
+      cursor: pointer;
+    }
+
     & > .card-text {
       display: flex;
       align-items: center;

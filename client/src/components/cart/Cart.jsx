@@ -10,6 +10,9 @@ export default function Cart() {
   const { cart, setCart, cartTotalPrice, setCartTotalPrice } =
     useContext(CartContext);
   const { products } = useContext(ProductsContext);
+  const itemsNumber = cart.reduce((a, i) => {
+    return a + i.quantityInCart;
+  }, 0);
 
   return (
     <Container className="Cart">
@@ -17,7 +20,9 @@ export default function Cart() {
         <div className="Cart-header-title">
           <h2>Your cart</h2>
         </div>
-        <div className="Cart-header-content">Total </div>
+        <div className="Cart-header-content">
+          Total ({itemsNumber} items): ${cartTotalPrice}{" "}
+        </div>
       </div>
       <div className="Cart-list">
         {cart.map((product, index) => (
