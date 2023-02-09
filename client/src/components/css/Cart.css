@@ -1,4 +1,20 @@
-@media only screen and (min-width: 1024px) {
+.Cart {
+  padding-top: 1rem;
+}
+
+.Cart > .Cart-summary {
+  margin-top: 2rem;
+}
+
+.Cart > .Cart-list > .CartItem {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px lightgrey solid;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
   .Cart {
     display: -ms-grid;
     display: grid;
@@ -19,13 +35,6 @@
     -ms-grid-row: 2;
         grid-row-start: 2;
   }
-  .Cart > .Cart-list > .CartItem {
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px lightgrey solid;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
-  }
   .Cart > .Cart-summary {
     -ms-grid-column: 8;
     -ms-grid-column-span: 5;
@@ -33,6 +42,7 @@
     -ms-grid-row: 1;
         grid-row-start: 1;
     grid-row-end: 3;
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=Cart.css.map */

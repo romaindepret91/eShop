@@ -17,4 +17,12 @@
     width: 50%;
   }
 }
+
+.counter {
+  position: absolute;
+  font-size: 0.8rem;
+  top: 0;
+  right: 3rem;
+  color: darkorange;
+}
 /*# sourceMappingURL=HeaderTop.css.map */

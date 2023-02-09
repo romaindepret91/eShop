@@ -1,5 +1,19 @@
 .Cart {
-  @media only screen and (min-width: 1024px) {
+  padding-top: 1rem;
+
+  & > .Cart-summary {
+    margin-top: 2rem;
+  }
+
+  & > .Cart-list > .CartItem {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px lightgrey solid;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media only screen and (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 2rem;
@@ -11,19 +25,12 @@
     & > .Cart-list {
       grid-column: 1/8;
       grid-row-start: 2;
-
-      & > .CartItem {
-        border: none;
-        border-radius: 0;
-        border-bottom: 1px lightgrey solid;
-        padding-bottom: 1rem;
-        margin-top: 1rem;
-      }
     }
     & > .Cart-summary {
       grid-column: 8/13;
       grid-row-start: 1;
       grid-row-end: 3;
+      margin-top: 0px;
     }
   }
 }

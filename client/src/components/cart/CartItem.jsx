@@ -6,20 +6,17 @@ import { useState, useEffect } from "react";
 
 export default function CartItem({ product, products, cart, setCart }) {
   const [quantityAvailable, setQuantityAvailable] = useState(1);
-  const [quantitySelected, setQuantitySelected] = useState(
-    product.quantityInCart
-  );
-  console.log(quantitySelected);
+
   const handleChangeQuantitySelected = (e) => {
-    setQuantitySelected(e.currentTarget.value);
     const cartUpdated = cart.map((p) => {
-      if (p._id === product._id)
+      if (p._id === product._id && p.selectedSize === product.selectedSize)
         p.quantityInCart = parseInt(e.currentTarget.value);
       return p;
     });
     setCart(cartUpdated);
     localStorage.setItem("cart", JSON.stringify(cartUpdated));
   };
+
   useEffect(() => {
     if (products.length) {
       setQuantityAvailable(
@@ -28,11 +25,7 @@ export default function CartItem({ product, products, cart, setCart }) {
         ]
       );
     }
-  }, [products]);
-
-  useEffect(() => {
-    setQuantitySelected(product.quantityInCart);
-  }, [cart]);
+  }, [products, cart]);
 
   const handleDeleteItem = (e) => {
     const id = e.currentTarget.parentElement.parentElement.dataset.productId;
@@ -47,12 +40,6 @@ export default function CartItem({ product, products, cart, setCart }) {
     setCart(cartUpdated);
     localStorage.setItem("cart", JSON.stringify(cartUpdated));
   };
-
-  useEffect(() => {
-    setQuantitySelected(
-      cart.find((p) => p._id === product._id)["quantityInCart"]
-    );
-  }, []);
 
   return (
     <Card className="CartItem" data-product-id={product._id}>
@@ -77,7 +64,7 @@ export default function CartItem({ product, products, cart, setCart }) {
           Quantity:{" "}
           {quantityAvailable && (
             <Form.Select
-              value={quantitySelected}
+              value={product.quantityInCart}
               onChange={handleChangeQuantitySelected}
             >
               {(() => {

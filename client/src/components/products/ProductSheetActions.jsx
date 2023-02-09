@@ -1,6 +1,7 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Container, Button, Col, Row } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
+import { getOneProduct } from "../../dbRequests/products";
 import "./ProductSheetActions.scss";
 
 export default function ProductSheetActions({
@@ -8,7 +9,8 @@ export default function ProductSheetActions({
   openCartSidePanel,
   setOpenCartSidePanel,
 }) {
-  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [productStock, setProductStock] = useState(null);
   const { cart, setCart, cartTotalPrice, setCartTotalPrice } =
     useContext(CartContext);
   const handleSelectSize = (e) => {
@@ -30,8 +32,11 @@ export default function ProductSheetActions({
         return p._id === product._id && p.selectedSize === selectedSize;
       })
     ) {
-      const i = cart.indexOf(product);
-      cart[i].quantityInCart += 1;
+      cart.forEach((p) => {
+        if (p._id === product._id && p.selectedSize === selectedSize) {
+          p.quantityInCart += 1;
+        }
+      });
     } else {
       product.quantityInCart = 1;
       product.selectedSize = selectedSize;
@@ -46,29 +51,38 @@ export default function ProductSheetActions({
       setOpenCartSidePanel(false);
     }, 6000);
   };
+
+  useEffect(() => {
+    getOneProduct(product.slug, product._id).then((res) => {
+      setProductStock(res.data.stock);
+    });
+  }, []);
+
   return (
     <Container className="ProductSheetActions ">
       <Row className="ProductSheetActions-size">
         <Col xs={12}>
           Select size:<span>{selectedSize}</span>
         </Col>
-        {Object.keys(product.stock).map((size, quantity) => {
-          return (
-            <Col xs={2} key={size}>
-              <Button
-                variant="light"
-                className={size}
-                disabled={quantity < 1}
-                onClick={(e) => handleSelectSize(e)}
-              >
-                {!size.includes("oz") ? size.toUpperCase() : size}
-              </Button>
-            </Col>
-          );
-        })}
+        {productStock &&
+          Object.keys(productStock).map((size) => {
+            return (
+              <Col xs={2} key={size}>
+                <Button
+                  variant="light"
+                  className={size}
+                  disabled={productStock[size] < 1}
+                  onClick={(e) => handleSelectSize(e)}
+                >
+                  {!size.includes("oz") ? size.toUpperCase() : size}
+                </Button>
+              </Col>
+            );
+          })}
       </Row>
       <Container className="ProductSheetActions-buy ">
         <Button
+          disabled={!selectedSize}
           size="lg"
           id="buy-btn"
           onClick={() => {
