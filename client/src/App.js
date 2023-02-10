@@ -14,9 +14,9 @@ export default function App() {
   );
   const [counterData, setCounterData] = useState({
     date: Date.now(),
-    delay: 30000,
+    delay: 900000,
   });
-  const wantedDelay = 30000;
+  const wantedDelay = 900000;
   const [openCartSidePanel, setOpenCartSidePanel] = useState(false);
   const { cart } = useContext(CartContext);
 
