@@ -8,6 +8,8 @@ export default function ProductSheetActions({
   product,
   openCartSidePanel,
   setOpenCartSidePanel,
+  startCounter,
+  setStartCounter,
 }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const [productStock, setProductStock] = useState(null);
@@ -50,6 +52,7 @@ export default function ProductSheetActions({
     setTimeout(() => {
       setOpenCartSidePanel(false);
     }, 6000);
+    setStartCounter(true);
   };
 
   useEffect(() => {

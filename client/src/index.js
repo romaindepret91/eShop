@@ -7,6 +7,9 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Auth0Provider } from "@auth0/auth0-react";
+import SizingGroupContextProvider from "./context/SizingGroupContext";
+import ProductsContextProvider from "./context/ProductsContext";
+import CartContextProvider from "./context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,7 +20,13 @@ root.render(
       redirectUri={window.location.origin}
     >
       <BrowserRouter>
-        <App />
+        <ProductsContextProvider>
+          <SizingGroupContextProvider>
+            <CartContextProvider>
+              <App />
+            </CartContextProvider>
+          </SizingGroupContextProvider>
+        </ProductsContextProvider>
       </BrowserRouter>
     </Auth0Provider>
   </React.StrictMode>

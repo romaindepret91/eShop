@@ -2,10 +2,10 @@ import { Navbar, Container } from "react-bootstrap";
 import HeaderLogo from "./HeaderLogo";
 import SearchBar from "../search/SearchBar";
 import HeaderButtonGroup from "./HeaderButtonGroup";
-import Countdown from "react-countdown";
 import "./HeaderTop.scss";
+import { Timer } from "./Timer";
 
-export default function HeaderTop() {
+export default function HeaderTop({ startCounter, counterData }) {
   return (
     <div className="Header_headerTop">
       <Navbar bg="light">
@@ -15,17 +15,7 @@ export default function HeaderTop() {
           </Navbar.Brand>
           <Container className="d-flex justify-content-end">
             <SearchBar />
-            <Countdown
-              autoStart={false}
-              date={Date.now() + 900000}
-              renderer={({ minutes, seconds }) => {
-                return (
-                  <span className="counter">
-                    Cart valid for {minutes}:{seconds} minutes
-                  </span>
-                );
-              }}
-            />
+            <Timer startCounter={startCounter} counterData={counterData} />
             <HeaderButtonGroup />
           </Container>
         </Container>

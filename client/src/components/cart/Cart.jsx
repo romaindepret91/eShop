@@ -20,6 +20,7 @@ export default function Cart() {
     }, 0);
     setCartTotalPrice(newTotal);
     localStorage.setItem("cartTotalPrice", newTotal);
+    if (!cart.length) localStorage.removeItem("end_date");
   }, [cart]);
 
   return (

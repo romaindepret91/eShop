@@ -8,6 +8,8 @@ import { Container, Row, Col } from "react-bootstrap";
 export default function ProductSheet({
   openCartSidePanel,
   setOpenCartSidePanel,
+  startCounter,
+  setStartCounter,
 }) {
   const { state } = useLocation();
   const [product] = useState(state.product);
@@ -26,6 +28,8 @@ export default function ProductSheet({
             product={product}
             openCartSidePanel={openCartSidePanel}
             setOpenCartSidePanel={setOpenCartSidePanel}
+            startCounter={startCounter}
+            setStartCounter={setStartCounter}
           />
         </Col>
       </Row>
