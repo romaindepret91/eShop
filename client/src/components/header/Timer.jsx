@@ -1,24 +1,32 @@
 import Countdown from "react-countdown";
 import { useEffect, useRef, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { updateProductStock } from "../../dbRequests/products";
 
 export const Timer = ({ startCounter, counterData }) => {
   const counter = useRef();
   const { cart, setCart } = useContext(CartContext);
 
-  const handleOnComplete = () => {
+  const handleOnComplete = async () => {
+    for (const p of cart) {
+      await updateProductStock(p._id, {
+        size: p.selectedSize,
+        quantity: p.quantityInCart,
+      });
+    }
     setCart([]);
     localStorage.setItem("cart", JSON.stringify([]));
     localStorage.setItem("cartTotalPrice", JSON.stringify(0));
     if (localStorage.getItem("end_date") != null)
       localStorage.removeItem("end_date");
   };
+
   useEffect(() => {
-    console.log(startCounter);
     if (startCounter || (localStorage.getItem("end_date") && cart.length)) {
       counter.current.start();
     } else counter.current.stop();
   }, [startCounter]);
+
   return (
     <Countdown
       onComplete={handleOnComplete}
@@ -36,7 +44,7 @@ export const Timer = ({ startCounter, counterData }) => {
         if (startCounter || (localStorage.getItem("end_date") && cart.length))
           return (
             <span className="counter">
-              Cart valid for {minutes}:{seconds} minutes
+              Cart expires in {minutes}:{seconds} minutes
             </span>
           );
       }}

@@ -4195,3 +4195,8 @@
   level: 'error',
   timestamp: '2023-02-05T19:07:07.222Z'
 }
+{
+  message: "Cannot read properties of undefined (reading '8oz')",
+  level: 'error',
+  timestamp: '2023-02-10T22:02:11.667Z'
+}

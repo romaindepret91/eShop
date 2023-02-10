@@ -3,15 +3,43 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./CartItem.scss";
 import { useState, useEffect } from "react";
+import { updateProductStock } from "../../dbRequests/products";
 
 export default function CartItem({ product, products, cart, setCart }) {
   const [quantityAvailable, setQuantityAvailable] = useState(1);
 
-  const handleChangeQuantitySelected = (e) => {
+  const handleChangeQuantitySelected = async (e) => {
+    let quantityDB;
     const cartUpdated = cart.map((p) => {
-      if (p._id === product._id && p.selectedSize === product.selectedSize)
+      if (p._id === product._id && p.selectedSize === product.selectedSize) {
+        quantityDB = -(parseInt(e.currentTarget.value) - p.quantityInCart);
         p.quantityInCart = parseInt(e.currentTarget.value);
+      }
       return p;
+    });
+    setCart(cartUpdated);
+    localStorage.setItem("cart", JSON.stringify(cartUpdated));
+    await updateProductStock(product._id, {
+      size: product.selectedSize,
+      quantity: quantityDB,
+    });
+  };
+
+  const handleDeleteItem = async (e) => {
+    const id = e.currentTarget.parentElement.parentElement.dataset.productId;
+    const size = e.currentTarget.parentElement.parentElement
+      .querySelector(".selectedSize")
+      .innerText.split(" ")
+      .at(-1);
+
+    const quantityDB = cart.find((p) => p._id === id).quantityInCart;
+    await updateProductStock(product._id, {
+      size: product.selectedSize,
+      quantity: quantityDB,
+    });
+
+    const cartUpdated = cart.filter((p) => {
+      return p._id !== id || p.selectedSize !== size;
     });
     setCart(cartUpdated);
     localStorage.setItem("cart", JSON.stringify(cartUpdated));
@@ -26,20 +54,6 @@ export default function CartItem({ product, products, cart, setCart }) {
       );
     }
   }, [products, cart]);
-
-  const handleDeleteItem = (e) => {
-    const id = e.currentTarget.parentElement.parentElement.dataset.productId;
-    const size = e.currentTarget.parentElement.parentElement
-      .querySelector(".selectedSize")
-      .innerText.split(" ")
-      .at(-1);
-
-    const cartUpdated = cart.filter((p) => {
-      return p._id !== id || p.selectedSize !== size;
-    });
-    setCart(cartUpdated);
-    localStorage.setItem("cart", JSON.stringify(cartUpdated));
-  };
 
   return (
     <Card className="CartItem" data-product-id={product._id}>

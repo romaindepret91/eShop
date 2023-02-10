@@ -6,6 +6,7 @@ import ProductCatalog from "./components/products/ProductCatalog";
 import ProductSheet from "./components/products/ProductSheet";
 import Cart from "./components/cart/Cart";
 import { CartContext } from "./context/CartContext";
+import resetCounter from "./helpers/resetCounter";
 
 export default function App() {
   const [startCounter, setStartCounter] = useState(
@@ -13,30 +14,18 @@ export default function App() {
   );
   const [counterData, setCounterData] = useState({
     date: Date.now(),
-    delay: 900000,
+    delay: 30000,
   });
-  const wantedDelay = 900000;
+  const wantedDelay = 30000;
   const [openCartSidePanel, setOpenCartSidePanel] = useState(false);
   const { cart } = useContext(CartContext);
-  console.log(cart);
 
   useEffect(() => {
     if (cart.length) {
       if (!startCounter) setStartCounter(true);
     } else setStartCounter(false);
 
-    const savedDate = localStorage.getItem("end_date");
-    if (savedDate != null && !isNaN(savedDate)) {
-      const currentTime = Date.now();
-      const delta = parseInt(savedDate, 10) - currentTime;
-
-      if (delta > wantedDelay) {
-        if (localStorage.getItem("end_date").length > 0)
-          localStorage.removeItem("end_date");
-      } else {
-        setCounterData({ date: currentTime, delay: delta });
-      }
-    }
+    resetCounter(setCounterData, wantedDelay);
   }, [cart]);
 
   return (

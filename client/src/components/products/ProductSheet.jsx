@@ -4,6 +4,7 @@ import ProductSheetImages from "./ProductSheetImages";
 import ProductSheetHeader from "./ProductSheetHeader";
 import ProductSheetActions from "./ProductSheetActions";
 import { Container, Row, Col } from "react-bootstrap";
+import { updateProductStock } from "../../dbRequests/products";
 
 export default function ProductSheet({
   openCartSidePanel,
@@ -12,8 +13,13 @@ export default function ProductSheet({
   setStartCounter,
 }) {
   const { state } = useLocation();
-  const [product] = useState(state.product);
+  const [product, setProduct] = useState(state.product);
   const [productImages] = useState(product.images);
+
+  const handleUpdateProducStock = async (stock) => {
+    const updatedProduct = await updateProductStock(product._id, stock);
+    setProduct(updatedProduct.data);
+  };
 
   return (
     <Container className="ProductSheet">
@@ -30,6 +36,7 @@ export default function ProductSheet({
             setOpenCartSidePanel={setOpenCartSidePanel}
             startCounter={startCounter}
             setStartCounter={setStartCounter}
+            handleUpdateProducStock={handleUpdateProducStock}
           />
         </Col>
       </Row>

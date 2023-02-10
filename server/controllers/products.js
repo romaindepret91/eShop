@@ -136,6 +136,36 @@ export const updateProduct = async (req, res) => {
 };
 
 /**
+ * Update product stock of product of a given id in database
+ * @param {object} req
+ * @param {object} res
+ */
+export const updateProductStock = async (req, res) => {
+  // Check if product id is received and valid
+  const id = req.params.id;
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(400).send("Invalid product id format"); // check if valid
+
+  const { size, quantity } = req.body;
+
+  let product = await Product.findById(id);
+  if (!product) {
+    return res.status(404).send("Product with given id not found");
+  }
+  const currentStock = product["stock"][size.toLowerCase()];
+  const newStock = currentStock + quantity;
+  console.log(newStock);
+
+  // Check if product with given id exists in database and update
+  product = await Product.findByIdAndUpdate(
+    id,
+    { ["stock." + size.toLowerCase()]: newStock },
+    { new: true }
+  );
+
+  res.json(product);
+};
+/**
  * Delete a product of a given id in database
  * @param {object} req
  * @param {object} res

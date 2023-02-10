@@ -5,6 +5,7 @@ import { uploadFiles } from "../middlewares/uploadFiles.js";
 import {
   createProduct,
   updateProduct,
+  updateProductStock,
   deleteProduct,
   deleteProductImage,
   getProducts,
@@ -28,6 +29,9 @@ router.put(
   [isUserLoggedIn, isAdmin, uploadFiles],
   catchErrors(updateProduct)
 );
+
+// Update product stock
+router.put("/products/updateStock/:id", catchErrors(updateProductStock));
 
 // Delete a product
 router.delete(

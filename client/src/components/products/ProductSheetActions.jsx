@@ -8,13 +8,14 @@ export default function ProductSheetActions({
   product,
   openCartSidePanel,
   setOpenCartSidePanel,
-  startCounter,
   setStartCounter,
+  handleUpdateProducStock,
 }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const [productStock, setProductStock] = useState(null);
   const { cart, setCart, cartTotalPrice, setCartTotalPrice } =
     useContext(CartContext);
+
   const handleSelectSize = (e) => {
     setSelectedSize(e.currentTarget.innerText);
     const eltClass = e.currentTarget.className;
@@ -49,17 +50,18 @@ export default function ProductSheetActions({
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("cartTotalPrice", cartTotalPrice + product.price);
     setOpenCartSidePanel(!openCartSidePanel);
+    setStartCounter(true);
+    handleUpdateProducStock({ size: selectedSize, quantity: -1 });
     setTimeout(() => {
       setOpenCartSidePanel(false);
     }, 6000);
-    setStartCounter(true);
   };
 
   useEffect(() => {
     getOneProduct(product.slug, product._id).then((res) => {
       setProductStock(res.data.stock);
     });
-  }, []);
+  }, [product]);
 
   return (
     <Container className="ProductSheetActions ">
