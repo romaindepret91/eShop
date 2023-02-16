@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
 import { ProductsContext } from "../../context/ProductsContext";
 import CartItem from "./CartItem";
@@ -23,7 +23,7 @@ export default function Cart() {
     if (!cart.length) localStorage.removeItem("end_date");
   }, [cart]);
 
-  return (
+  return cart.length > 0 ? (
     <Container className="Cart">
       <div className="Cart-header">
         <div className="Cart-header-title">
@@ -48,6 +48,13 @@ export default function Cart() {
       <div className="Cart-summary">
         <CartSummary cart={cart} cartTotalPrice={cartTotalPrice} />
       </div>
+    </Container>
+  ) : (
+    <Container className="Cart-empty">
+      <h1>Your Cart is empty</h1>
+      <p>Once you add something in your cart - It will appear here.</p>
+      <p>Ready to get started?</p>
+      <Button size="lg">Start shopping</Button>
     </Container>
   );
 }
